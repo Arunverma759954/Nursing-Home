@@ -138,10 +138,10 @@ export default function Home() {
 
               {/* Services Dropdown */}
               <div className="relative group">
-                <button className="px-5 py-3 text-lg font-bold text-gray-700 hover:text-[#9d174d] hover:bg-red-50 rounded-2xl transition-all flex items-center gap-2">
+                <Link href="/services" className="px-5 py-3 text-lg font-bold text-gray-700 hover:text-[#9d174d] hover:bg-red-50 rounded-2xl transition-all flex items-center gap-2">
                   Services
                   <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" /></svg>
-                </button>
+                </Link>
                 <div className="absolute top-full left-0 w-72 pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
                   <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(157,23,77,0.15)] border border-gray-100 p-3 overflow-hidden">
                     {[
@@ -861,19 +861,19 @@ export default function Home() {
               <span className="w-8 h-1 bg-[#9d174d] rounded-full"></span>
               Quick Navigation
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-gray-400 font-bold">
               {[
-                { n: "Our Story", l: "#about" },
-                { n: "Medical Services", l: "#services" },
-                { n: "Expert Team", l: "#doctors" },
-                { n: "Patient Stories", l: "#testimonials" },
-                { n: "Book Appointment", l: "#contact" }
-              ].map((link, idx) => (
-                <li key={idx}>
-                  <a href={link.l} className="group flex items-center gap-3 text-gray-400 hover:text-white text-lg font-medium transition-colors">
+                { l: "Our Story", h: "#about" },
+                { l: "Medical Services", h: "/services" },
+                { l: "Expert Team", h: "#doctors" },
+                { l: "Patient Stories", h: "#testimonials" },
+                { l: "Contact Us", h: "#contact" },
+              ].map((item, i) => (
+                <li key={i}>
+                  <Link href={item.h} className="hover:text-white transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-[#9d174d] transition-colors"></span>
-                    <span className="group-hover:translate-x-1 transition-transform">{link.n}</span>
-                  </a>
+                    {item.l}
+                  </Link>
                 </li>
               ))}
             </ul>
