@@ -128,3 +128,22 @@
   color: transparent;
   background-image: linear-gradient(to right, #dc2626, #e11d48, #ef4444);
 }
+
+/* Page Transitions - Best UI Entry Animation */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-page-enter {
+  animation: pageEnter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  will-change: transform, opacity, filter;
+}
