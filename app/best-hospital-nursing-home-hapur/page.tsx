@@ -3,6 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import {
+  ChevronDown,
+  Check,
+  Phone,
+  Activity,
+  Baby,
+  ShieldCheck,
+  Heart,
+  UserCheck,
+  Clock,
+  Building2,
+  FileText,
+  HeartHandshake,
+  Star,
+  ArrowRight,
+  CheckCircle2
+} from "lucide-react";
 
 const FAQItem = ({
   question,
@@ -25,29 +42,15 @@ const FAQItem = ({
           {question}
         </span>
         <span
-          className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 ${
-            isOpen ? "bg-[#9d174d] text-white rotate-180" : "bg-gray-50 text-gray-400 group-hover:bg-red-50 group-hover:text-[#9d174d]"
-          }`}
+          className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 ${isOpen ? "bg-[#9d174d] text-white rotate-180" : "bg-gray-50 text-gray-400 group-hover:bg-red-50 group-hover:text-[#9d174d]"
+            }`}
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
+          <ChevronDown className="w-5 h-5" />
         </span>
       </button>
       <div
-        className={`transition-[max-height,opacity] duration-500 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`transition-[max-height,opacity] duration-500 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="p-8 pt-0 text-gray-600 leading-relaxed border-t border-gray-50">
           {answer}
@@ -93,8 +96,8 @@ export default function BestHospitalPage() {
       <section className="relative overflow-hidden bg-white pb-20 lg:pb-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(157,23,77,0.05),transparent_40%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.03),transparent_40%)]" />
-        
-        <div className="max-w-7xl mx-auto px-6 pt-10 md:pt-20 relative">
+
+        <div className="max-w-screen-2xl mx-auto px-6 pt-10 md:pt-20 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-in slide-in-from-left-5 duration-700 fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[11px] font-black uppercase tracking-widest bg-red-50 text-[#9d174d] border border-red-100 shadow-sm hover:shadow-md transition-shadow cursor-default">
@@ -135,11 +138,11 @@ export default function BestHospitalPage() {
                 <div className="absolute bottom-0 left-0 p-10 text-white w-full">
                   <div className="flex justify-between items-end">
                     <div>
-                        <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-2">Since 1999</p>
-                        <p className="text-3xl font-black tracking-tight">Trusted by Thousands</p>
+                      <p className="text-sm font-bold uppercase tracking-widest opacity-80 mb-2">Since 1999</p>
+                      <p className="text-3xl font-black tracking-tight">Trusted by Thousands</p>
                     </div>
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
-                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                      <Star className="w-6 h-6 text-white fill-current" />
                     </div>
                   </div>
                 </div>
@@ -170,9 +173,9 @@ export default function BestHospitalPage() {
           </p>
           <div className="mt-12 flex justify-center">
             <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#9d174d] animate-bounce" style={{ animationDelay: '0s' }}></div>
-                <div className="w-3 h-3 rounded-full bg-[#9d174d] animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                <div className="w-3 h-3 rounded-full bg-[#9d174d] animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+              <div className="w-3 h-3 rounded-full bg-[#9d174d] animate-bounce" style={{ animationDelay: '0s' }}></div>
+              <div className="w-3 h-3 rounded-full bg-[#9d174d] animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+              <div className="w-3 h-3 rounded-full bg-[#9d174d] animate-bounce" style={{ animationDelay: '0.2s' }}></div>
             </div>
           </div>
         </div>
@@ -181,7 +184,7 @@ export default function BestHospitalPage() {
       {/* Emergency Section */}
       <section className="py-24 bg-gray-50 overflow-hidden relative">
         <div className="absolute -left-20 top-20 w-96 h-96 bg-red-200/30 rounded-full blur-[100px]" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-screen-2xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1 relative group">
               <div className="absolute inset-0 bg-[#9d174d] rounded-[3rem] rotate-6 opacity-10 group-hover:rotate-3 transition-transform duration-500 scale-105" />
@@ -197,7 +200,7 @@ export default function BestHospitalPage() {
               <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] max-w-xs z-10 animate-bounce-slow">
                 <div className="flex items-center gap-5">
                   <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-[#9d174d] shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <Phone className="w-7 h-7" />
                   </div>
                   <div>
                     <p className="text-xs font-black text-gray-400 uppercase tracking-widest">Emergency</p>
@@ -206,7 +209,7 @@ export default function BestHospitalPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="order-1 lg:order-2 space-y-10">
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full text-[#9d174d] font-bold text-xs uppercase tracking-wider mb-4 border border-red-100">
@@ -234,19 +237,21 @@ export default function BestHospitalPage() {
                     "Ensure that financial or logistical issues won’t be a problem in life-saving care."
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                        <div className="mt-1.5 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center shrink-0 text-[#9d174d] text-xs font-bold">✓</div>
-                        <span>{item}</span>
+                      <div className="mt-1.5 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center shrink-0 text-[#9d174d] text-xs font-bold">
+                        <Check className="w-3 h-3" />
+                      </div>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
                 <div className="bg-[#9d174d] text-white p-6 rounded-2xl shadow-xl shadow-red-500/20 flex items-center justify-between gap-4 mt-6 transform hover:scale-[1.02] transition-transform cursor-pointer">
-                    <div>
-                        <p className="font-bold text-red-100 text-xs uppercase tracking-wider mb-1">Medical Emergency?</p>
-                        <p className="font-black text-xl">Save our 24/7 Number</p>
-                    </div>
-                    <div className="bg-white text-[#9d174d] px-5 py-3 rounded-xl font-black shadow-lg">
-                        +91 63979 70802
-                    </div>
+                  <div>
+                    <p className="font-bold text-red-100 text-xs uppercase tracking-wider mb-1">Medical Emergency?</p>
+                    <p className="font-black text-xl">Save our 24/7 Number</p>
+                  </div>
+                  <div className="bg-white text-[#9d174d] px-5 py-3 rounded-xl font-black shadow-lg">
+                    +91 63979 70802
+                  </div>
                 </div>
               </div>
             </div>
@@ -256,7 +261,7 @@ export default function BestHospitalPage() {
 
       {/* Women's Health Section */}
       <section className="py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-screen-2xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10">
               <div>
@@ -273,7 +278,7 @@ export default function BestHospitalPage() {
               <p className="text-gray-600 text-lg leading-relaxed">
                 This is not just a claim as we carry the initiative "caring for Women" all the time with the assistance of our gynecologists and nurses. We are proud to be the top-rated nursing home in Hapur for safe, painless deliveries and neonatal support.
               </p>
-              
+
               <div className="space-y-8 bg-pink-50/50 p-8 rounded-[2.5rem] border border-pink-100">
                 <h3 className="text-xl font-black text-gray-900 flex items-center gap-3">
                   <span className="w-8 h-1 bg-[#9d174d] rounded-full"></span>
@@ -282,7 +287,7 @@ export default function BestHospitalPage() {
                 <ul className="space-y-6">
                   <li className="flex gap-4 group">
                     <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-pink-500 shadow-sm border border-pink-100 group-hover:scale-110 transition-transform">
-                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                      <Activity className="w-6 h-6" />
                     </div>
                     <div>
                       <span className="font-bold text-gray-900 block text-lg mb-2">Complex Gynecological Issues</span>
@@ -297,13 +302,13 @@ export default function BestHospitalPage() {
                   </li>
                   <li className="flex gap-4 group">
                     <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-pink-500 shadow-sm border border-pink-100 group-hover:scale-110 transition-transform">
-                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <ShieldCheck className="w-6 h-6" />
                     </div>
                     <span className="text-gray-600 font-medium pt-2">Experts from our gynecology department are great at removing cysts and tumors with minimal recovery time.</span>
                   </li>
                   <li className="flex gap-4 group">
                     <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-pink-500 shadow-sm border border-pink-100 group-hover:scale-110 transition-transform">
-                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <Baby className="w-6 h-6" />
                     </div>
                     <span className="text-gray-600 font-medium pt-2">Ensure both mother and baby transition smoothly into their new life together.</span>
                   </li>
@@ -313,7 +318,7 @@ export default function BestHospitalPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl shadow-pink-900/10 border-8 border-white group">
                 <Image
@@ -321,6 +326,7 @@ export default function BestHospitalPage() {
                   alt="Women's Health Specialist"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#9d174d]/90 via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-0 left-0 w-full p-10 text-white">
@@ -338,14 +344,14 @@ export default function BestHospitalPage() {
       <section className="py-24 bg-[#0b1120] text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#9d174d]/20 blur-[120px]" />
         <div className="absolute bottom-0 left-0 w-1/3 h-full bg-blue-600/20 blur-[120px]" />
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+        <div className="max-w-screen-2xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
             <div>
-                <h2 className="text-3xl md:text-4xl font-black mb-8 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-black mb-8 leading-tight">
                 Patient-Centric Facilities and Ethical Transparency
-                </h2>
-                <div className="h-1 w-24 bg-gradient-to-r from-[#9d174d] to-transparent rounded-full mb-8"></div>
+              </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-[#9d174d] to-transparent rounded-full mb-8"></div>
             </div>
             <div className="text-gray-400 text-lg space-y-6 leading-relaxed">
               <p>
@@ -362,23 +368,17 @@ export default function BestHospitalPage() {
               {
                 title: "Premium Facilities",
                 desc: "We need to complete all the requirements on time with premium healthcare facilities, from wards to ICUs.",
-                icon: (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                )
+                icon: <Building2 className="w-8 h-8" />
               },
               {
                 title: "Transparent System",
                 desc: "We are thankful to our management for building a transparent system that helps doctors and assists patients and families.",
-                icon: (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-                )
+                icon: <FileText className="w-8 h-8" />
               },
               {
                 title: "Respect & Kindness",
                 desc: "We always ensure that every interaction is marked by respect and kindness. We prioritize your comfort and budget.",
-                icon: (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                )
+                icon: <HeartHandshake className="w-8 h-8" />
               }
             ].map((feature, i) => (
               <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-[2.5rem] hover:-translate-y-2 hover:bg-white/10 transition-all duration-300 group">
@@ -397,19 +397,19 @@ export default function BestHospitalPage() {
 
       {/* Conclusion / CTA */}
       <section className="py-24 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-screen-2xl mx-auto px-6">
           <div className="bg-gradient-to-br from-[#9d174d] to-[#be185d] rounded-[3rem] p-8 md:p-20 text-center text-white relative overflow-hidden shadow-2xl shadow-red-900/30 group">
             <div className="absolute top-0 left-0 w-full h-full bg-[url('/file.svg')] opacity-10 bg-repeat bg-center mix-blend-overlay transition-opacity duration-500 group-hover:opacity-20" />
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-[80px]" />
             <div className="absolute bottom-40 -left-40 w-96 h-96 bg-black/10 rounded-full blur-[80px]" />
-            
+
             <div className="relative z-10 space-y-10">
               <div>
                 <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">
-                    Our Promise
+                  Our Promise
                 </span>
                 <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-6 leading-tight">
-                    Conclusion
+                  Conclusion
                 </h2>
               </div>
               <div className="space-y-8 text-lg md:text-2xl text-red-50 max-w-4xl mx-auto leading-relaxed font-light">
@@ -451,7 +451,7 @@ export default function BestHospitalPage() {
               Frequently Asked Questions
             </h2>
           </div>
-          
+
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <FAQItem

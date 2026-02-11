@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
 
-export default function HeartChestCareService() {
+export default function HeartChestCarePage() {
     return (
         <div className="min-h-screen bg-white text-gray-900 pt-[110px] md:pt-[130px]">
 
@@ -14,8 +14,6 @@ export default function HeartChestCareService() {
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Heart & Chest Care in Hapur</h1>
                     <nav className="flex items-center gap-2 text-white/90 text-sm font-medium">
                         <Link href="/" className="hover:underline">Home</Link>
-                        <span>/</span>
-                        <Link href="/services" className="hover:underline">Services</Link>
                         <span>/</span>
                         <span className="opacity-75">Heart & Chest Care</span>
                     </nav>
@@ -35,7 +33,7 @@ export default function HeartChestCareService() {
                 </section>
 
                 {/* Section 1: Image Left + Content Right */}
-                <section className="grid lg:grid-cols-2 gap-16 items-start">
+                <section className="grid lg:grid-cols-2 gap-16 items-start border-b border-gray-100 pb-20">
                     <div className="relative h-[450px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-100">
                         <Image
                             src="/heart-chest.jpg"

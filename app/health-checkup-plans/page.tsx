@@ -68,7 +68,7 @@ export default function HealthCheckupPlans() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#5b0f2d]/90 via-[#6f1436]/80 to-[#6f1436]/40" />
         </div>
-        <div className="max-w-7xl mx-auto px-6 pt-12 pb-12 relative">
+        <div className="max-w-screen-2xl mx-auto px-6 pt-12 pb-12 relative">
           <span className="inline-flex w-fit items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-white/15 text-white border border-white/20">
             Preventive Care
           </span>
@@ -88,7 +88,7 @@ export default function HealthCheckupPlans() {
       </section>
 
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-screen-2xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-tight mb-4">
               Comprehensive Health Check-Up Plans at <span className="text-[#9d174d]">Raj Nursing Home</span>
@@ -108,7 +108,7 @@ export default function HealthCheckupPlans() {
                 <p className="text-sm text-gray-500 mb-6 leading-relaxed font-medium">
                   {plan.description}
                 </p>
-                
+
                 <div className="mt-auto space-y-4 pt-6 border-t border-gray-100">
                   <div>
                     <span className="text-[10px] font-black uppercase tracking-widest text-[#9d174d] block mb-1">Includes</span>
@@ -125,8 +125,8 @@ export default function HealthCheckupPlans() {
                     </div>
                   </div>
                 </div>
-                
-                <Link 
+
+                <Link
                   href="/contact"
                   className="mt-8 w-full py-3 bg-gray-900 text-white text-xs font-black uppercase tracking-widest rounded-xl flex items-center justify-center hover:bg-[#9d174d] transition-colors"
                 >

@@ -19,7 +19,7 @@ export default function TreatmentPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#9d174d]/10 via-white to-white" />
         <div className="absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-[#9d174d]/15 blur-[120px]" />
         <div className="absolute bottom-[-120px] left-[-120px] h-[320px] w-[320px] rounded-full bg-red-200/40 blur-[120px]" />
-        <div className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-16 relative">
+        <div className="max-w-screen-2xl mx-auto px-6 pt-16 md:pt-24 pb-16 relative">
           <div className="grid lg:grid-cols-[1.1fr,0.9fr] gap-10 items-center">
             <div className="flex flex-col gap-5">
               <span className="inline-flex w-fit items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-red-50 text-[#9d174d] border border-red-100">
@@ -67,7 +67,7 @@ export default function TreatmentPage() {
 
       {/* Treatments Grid */}
       <section className="pb-20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-screen-2xl mx-auto px-6">
           <div className="flex items-center justify-between mb-8">
             <div>
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#9d174d]">

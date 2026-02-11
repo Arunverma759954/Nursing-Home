@@ -56,7 +56,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/30 z-10"></div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full h-full flex items-center">
+        <div className="relative z-20 max-w-screen-2xl mx-auto px-6 md:px-12 w-full h-full flex items-center">
           <div className="max-w-3xl space-y-6">
             {/* Badge - Smaller */}
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/80 border border-gray-200 text-[#9d174d] text-[10px] md:text-xs font-bold rounded-full shadow-sm backdrop-blur-md">
@@ -129,7 +129,7 @@ export default function Home() {
 
       {/* ABOUT SECTION */}
       <section id="about" className="py-16 md:py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
             <div className="grid grid-cols-2 gap-3 md:gap-6">
               <div className="space-y-3 md:space-y-6">
@@ -177,7 +177,7 @@ export default function Home() {
 
       {/* SERVICES */}
       <section id="services" className="py-16 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center mb-12 md:mb-24">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-6 text-center mb-12 md:mb-24">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">Our Medical Services</span>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-2 md:mt-4">Advanced Medical <span className="text-[#9d174d]">Solutions</span></h2>
         </div>
@@ -189,7 +189,7 @@ export default function Home() {
             { name: "Laparoscopic Surgery", slug: "laparoscopic-surgery", img: "/laparoscopic2.jpg", desc: "Minimally invasive safe and modern surgical care for quick recovery.", icon: "🔬" },
             { name: "Diagnostic Services", slug: "diagnostic-services", img: "/Diagnostic3.jpg", desc: "Full-spectrum diagnostics with high-resolution imaging and lab tests.", icon: "🔍" },
             { name: "IVF & Fertility Treatment", slug: "ivf-and-fertility", img: "/IVF2.jpg", desc: "Supporting your journey to parenthood with advanced medical solutions.", icon: "👶" },
-            { name: "Woman's Health", slug: "woman-health", img: "/raj/gyne-2.jpg", desc: "Comprehensive gynecological care and maternity services available 24/7.", icon: "💗" },
+            { name: "Woman's Health", slug: "womens-health-in-hapur", img: "/raj/gyne-2.jpg", desc: "Comprehensive gynecological care and maternity services available 24/7.", icon: "💗" },
           ].map((d, i) => (
             <div key={i} className="group relative bg-white border border-gray-100 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-[0_40px_80px_rgba(157,23,77,0.15)] transition-all duration-700 hover:-translate-y-4">
               <div className="relative h-56 md:h-72 overflow-hidden">
@@ -212,7 +212,7 @@ export default function Home() {
       {/* DOCTORS */}
       {/* DOCTORS SECTION - Responsive Cards */}
       <section id="doctors" className="py-16 md:py-24 bg-gray-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center mb-10 md:mb-16">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-6 text-center mb-10 md:mb-16">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">Meet Our Expert Team</span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mt-2 md:mt-4 tracking-tighter">Legacy of <span className="text-[#9d174d]">Expertise</span></h2>
         </div>
@@ -255,14 +255,14 @@ export default function Home() {
               <div className="relative aspect-[3/4] w-full sm:w-36 mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <Image src="/raj/dr.Vipin.jpg" alt="Dr. Vipin" fill className="object-cover object-top" />
               </div>
-              <button className="hidden sm:block w-full py-3.5 bg-[#9d174d] text-white font-black text-[10px] rounded-xl uppercase tracking-widest hover:bg-[#831843] transition-all shadow-lg active:scale-95">
-                Book Appt
-              </button>
+              <Link href="/dr-vipin-kumar-sharma" className="hidden sm:block w-full py-3.5 bg-[#9d174d] text-white font-black text-[10px] rounded-xl uppercase tracking-widest hover:bg-[#831843] transition-all shadow-lg active:scale-95 text-center inline-block">
+                Read More
+              </Link>
             </div>
             {/* Mobile Button */}
-            <button className="sm:hidden w-full py-3 bg-[#9d174d] text-white font-black text-xs rounded-xl uppercase tracking-widest shadow-lg order-3">
-              Book Appointment
-            </button>
+            <Link href="/dr-vipin-kumar-sharma" className="sm:hidden w-full py-3 bg-[#9d174d] text-white font-black text-xs rounded-xl uppercase tracking-widest shadow-lg order-3 text-center block">
+              Read More
+            </Link>
           </div>
 
           {/* Doctor 2: Dr. Srishti Bhardwaj */}
@@ -297,13 +297,13 @@ export default function Home() {
               <div className="relative aspect-[3/4] w-full sm:w-36 mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white grayscale group-hover:grayscale-0 transition-all">
                 <Image src="/raj/dr-Srishti.jpg" alt="Dr. Srishti" fill className="object-cover object-top" />
               </div>
-              <button className="hidden sm:block w-full py-3.5 bg-[#9d174d] text-white font-black text-[10px] rounded-xl uppercase tracking-widest hover:bg-[#831843] transition-all shadow-lg active:scale-95">
-                Book Appt
-              </button>
+              <Link href="/dr-srishti-bhardwaj" className="hidden sm:block w-full py-3.5 bg-[#9d174d] text-white font-black text-[10px] rounded-xl uppercase tracking-widest hover:bg-[#831843] transition-all shadow-lg active:scale-95 text-center inline-block">
+                Read More
+              </Link>
             </div>
-            <button className="sm:hidden w-full py-3 bg-[#9d174d] text-white font-black text-xs rounded-xl uppercase tracking-widest shadow-lg order-3">
-              Book Appointment
-            </button>
+            <Link href="/dr-srishti-bhardwaj" className="sm:hidden w-full py-3 bg-[#9d174d] text-white font-black text-xs rounded-xl uppercase tracking-widest shadow-lg order-3 text-center block">
+              Read More
+            </Link>
           </div>
 
           {/* Doctor 3: Dr. M.C. Sharma */}
@@ -346,13 +346,13 @@ export default function Home() {
               <div className="relative aspect-[3/4] w-full sm:w-36 mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <Image src="/raj/M.C.Sharma.jpg" alt="Dr. M.C. Sharma" fill className="object-cover object-top" />
               </div>
-              <button className="hidden sm:block w-full py-3.5 bg-gray-900 text-white font-black text-[10px] rounded-xl uppercase tracking-widest hover:bg-black transition-all shadow-lg active:scale-95">
-                Book Appt
-              </button>
+              <Link href="/dr-mc-sharma" className="hidden sm:block w-full py-3.5 bg-[#9d174d] text-white font-black text-[10px] rounded-xl uppercase tracking-widest hover:bg-[#831843] transition-all shadow-lg active:scale-95 text-center inline-block">
+                Read More
+              </Link>
             </div>
-            <button className="sm:hidden w-full py-3 bg-gray-900 text-white font-black text-xs rounded-xl uppercase tracking-widest shadow-lg order-3">
-              Book Appointment
-            </button>
+            <Link href="/dr-mc-sharma" className="sm:hidden w-full py-3 bg-[#9d174d] text-white font-black text-xs rounded-xl uppercase tracking-widest shadow-lg order-3 text-center block">
+              Read More
+            </Link>
           </div>
         </div>
       </section>
@@ -510,7 +510,7 @@ export default function Home() {
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[120px]"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div className="max-w-screen-2xl mx-auto px-6 relative z-10 text-center">
           {/* Section Title */}
           <div className="mb-16">
             <span className="text-red-400 font-black tracking-[0.3em] uppercase text-sm">Patient Stories</span>
@@ -600,12 +600,12 @@ export default function Home() {
 
       {/* FACILITIES */}
       <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 text-center mb-24">
+        <div className="max-w-screen-2xl mx-auto px-6 text-center mb-24">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-sm">Our Facilities</span>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-4">Modern Medical <span className="text-[#9d174d]">Infrastructure</span></h2>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {facilities.map((f, i) => (
             <div key={i} className="group bg-white rounded-[2rem] p-4 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <div className="relative h-64 rounded-2xl overflow-hidden mb-6">

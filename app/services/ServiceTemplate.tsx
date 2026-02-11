@@ -11,16 +11,23 @@ export default function ServicePage({
     title = "Medical Service",
     description = "Detailed information about our medical specialty.",
     image = "/medical.jpg",
-    features = ["24/7 Support", "Expert Doctors", "Modern Equipment"]
+    features = ["24/7 Support", "Expert Doctors", "Modern Equipment"],
+    children
+}: {
+    title?: string,
+    description?: string,
+    image?: string,
+    features?: string[],
+    children?: React.ReactNode
 }) {
     return (
         <div className="min-h-screen bg-gray-50 pt-32 pb-20">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-screen-2xl mx-auto px-6">
                 <Link href="/" className="inline-flex items-center gap-2 text-[#9d174d] font-black mb-12 hover:gap-4 transition-all">
                     <ArrowLeft size={24} /> BACK TO HOME
                 </Link>
 
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
                     <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
                         <Image src={image} alt={title} fill className="object-cover" />
                     </div>
@@ -44,11 +51,17 @@ export default function ServicePage({
                             ))}
                         </div>
 
-                        <button className="w-full py-6 bg-[#9d174d] text-white font-black text-2xl rounded-3xl shadow-2xl shadow-red-500/30 hover:-translate-y-2 transition-all">
+                        <Link href="/contact" className="block w-full py-6 bg-[#9d174d] text-white font-black text-2xl rounded-3xl shadow-2xl shadow-red-500/30 hover:-translate-y-2 transition-all text-center">
                             Book Appointment Now
-                        </button>
+                        </Link>
                     </div>
                 </div>
+
+                {children && (
+                    <div className="mt-20">
+                        {children}
+                    </div>
+                )}
             </div>
         </div>
     );

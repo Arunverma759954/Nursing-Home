@@ -284,7 +284,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500">
+      <div className="max-w-screen-2xl mx-auto px-6 pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500">
         <p>© 2024 Raj Nursing Home. All rights reserved.</p>
         <div className="flex gap-8">
           <Link href="#" className="hover:text-white transition-colors">
@@ -302,7 +302,7 @@ export default function Footer() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-[999] p-4 bg-[#9d174d] text-white rounded-full shadow-2xl hover:bg-[#831843] transition-all duration-300 hover:-translate-y-2 hover:shadow-red-500/30 group animate-bounce"
+          className="fixed bottom-8 right-8 z-30 p-4 bg-[#9d174d] text-white rounded-full shadow-2xl hover:bg-[#831843] transition-all duration-300 hover:-translate-y-2 hover:shadow-red-500/30 group"
           aria-label="Scroll to top"
         >
           <svg

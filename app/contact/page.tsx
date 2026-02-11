@@ -17,7 +17,7 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#5b0f2d]/90 via-[#6f1436]/80 to-[#6f1436]/40" />
         </div>
-        <div className="max-w-7xl mx-auto px-6 pt-12 pb-12 relative">
+        <div className="max-w-screen-2xl mx-auto px-6 pt-12 pb-12 relative">
           <span className="inline-flex w-fit items-center gap-2 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-white/15 text-white border border-white/20">
             Contact Us
           </span>
@@ -32,7 +32,7 @@ export default function ContactPage() {
       </section>
 
       <section className="pb-24 bg-gradient-to-b from-white via-white to-gray-50/40">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.15fr,0.85fr] gap-10">
+        <div className="max-w-screen-2xl mx-auto px-6 grid lg:grid-cols-[1.15fr,0.85fr] gap-10">
           <div className="bg-white border border-gray-100 rounded-[2.75rem] shadow-[0_30px_80px_rgba(17,24,39,0.08)] p-6 md:p-12">
             <div className="flex items-center gap-3 mb-6">
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-red-50 text-[#9d174d] text-lg">
@@ -194,7 +194,7 @@ export default function ContactPage() {
       </section>
 
       <section className="pb-24">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-screen-2xl mx-auto px-6">
           <div className="flex items-center justify-between mb-5">
             <div>
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#9d174d]">

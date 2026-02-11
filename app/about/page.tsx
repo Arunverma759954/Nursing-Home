@@ -17,7 +17,7 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#5b0f2d]/90 via-[#6f1436]/80 to-[#6f1436]/40" />
         </div>
-        <div className="max-w-7xl mx-auto px-6 pt-12 pb-12 relative flex items-center justify-between">
+        <div className="max-w-screen-2xl mx-auto px-6 pt-12 pb-12 relative flex items-center justify-between">
           <div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight mb-2">
               About Us
@@ -42,7 +42,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="max-w-screen-2xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-tight mb-4">
@@ -101,7 +101,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] rounded-[2rem] overflow-hidden shadow-2xl">
             <Image
               src="/medic-563423_1280.jpg"

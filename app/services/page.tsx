@@ -92,7 +92,7 @@ export default function ServicesPage() {
 
     return (
         <div className="bg-gray-50 min-h-screen text-gray-900 font-sans">
-            <main className="pt-[110px] md:pt-[125px] px-4 md:px-8 pb-8 max-w-[1600px] mx-auto min-h-screen flex flex-col">
+            <main className="pt-[110px] md:pt-[125px] px-4 md:px-8 pb-8 max-w-screen-2xl mx-auto min-h-screen flex flex-col">
                 <div className="mb-3 text-center max-w-3xl mx-auto">
                     <span className="inline-block px-2 py-0.5 bg-red-50 text-[#9d174d] font-bold tracking-widest uppercase text-[8px] rounded-full mb-1 border border-red-100">World Class Healthcare</span>
                     <h1 className="text-xl md:text-2xl lg:text-3xl mt-1 font-black text-gray-900 mb-1 leading-tight uppercase tracking-tight">Centers of Excellence</h1>
