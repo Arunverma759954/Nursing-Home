@@ -137,7 +137,7 @@ const navLinks = [
   { label: "Home", href: "/#home" },
   { label: "About", href: "/about" },
   { label: "Doctors", href: "/#doctors" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blogs", href: "/blog" },
   { label: "Testimonials", href: "/#testimonials" },
   { label: "Treatment", href: "/treatment" },
   { label: "Contact", href: "/contact" },
@@ -174,6 +174,18 @@ export default function Navbar() {
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    // Handle screen resize to close menu on large screens
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) { // xl breakpoint
+        setIsMenuOpen(false);
+      }
+    };
+    
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     // Initialize Google Translate
@@ -423,88 +435,79 @@ export default function Navbar() {
           }`}
       >
         <div
-          className={`absolute inset-0 bg-gray-900/40 backdrop-blur-md transition-opacity duration-700 ${isMenuOpen ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 bg-gray-900/60 backdrop-blur-md transition-opacity duration-700 ${isMenuOpen ? "opacity-100" : "opacity-0"
             }`}
           onClick={() => setIsMenuOpen(false)}
         />
         <div
-          className={`absolute top-0 right-0 bottom-0 w-full sm:w-[450px] bg-white/95 backdrop-blur-2xl transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1) shadow-[0_0_100px_rgba(0,0,0,0.2)] ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute top-0 right-0 bottom-0 w-[85%] sm:w-[400px] bg-white transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) shadow-[0_0_100px_rgba(157,23,77,0.2)] ${isMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
-          <div className="flex flex-col h-full relative overflow-hidden">
-            {/* Animated Background Elements */}
-            <div className="absolute top-[-10%] right-[-10%] w-80 h-80 bg-[#9d174d]/10 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute bottom-[-10%] left-[-10%] w-80 h-80 bg-blue-500/10 rounded-full blur-[100px] animate-pulse delay-700"></div>
-
-            <div className="flex items-center justify-between p-8 border-b border-gray-100 bg-white/50 backdrop-blur-xl sticky top-0 z-10">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 relative">
-                  <Image src="/RNH logo.png" alt="Logo" fill className="object-contain" priority />
-                </div>
-                <span className="font-black text-xl text-[#9d174d] tracking-tighter">NAVIGATION</span>
-              </div>
+          <div className="flex flex-col h-full bg-white relative overflow-hidden">
+             {/* Stylish Background Decoration */}
+            <div className="absolute top-[-50px] right-[-50px] w-80 h-80 bg-gradient-to-br from-red-50 to-[#9d174d]/5 rounded-full blur-[80px] opacity-70 pointer-events-none animate-pulse"></div>
+            <div className="absolute bottom-[-50px] left-[-50px] w-64 h-64 bg-blue-50 rounded-full blur-[80px] opacity-70 pointer-events-none"></div>
+            
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-50 bg-white/90 backdrop-blur-xl sticky top-0 z-20">
+              <span className="font-black text-xl text-[#9d174d] uppercase tracking-wider flex items-center gap-2">
+                <div className="w-2 h-8 bg-[#9d174d] rounded-full"></div>
+                Menu
+              </span>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="group p-4 bg-gray-50 hover:bg-[#9d174d] text-gray-900 hover:text-white rounded-2xl transition-all duration-500 hover:scale-110 active:scale-95 shadow-lg border border-gray-100"
+                className="p-3 bg-gray-50 hover:bg-red-50 text-gray-500 hover:text-[#9d174d] rounded-2xl transition-all hover:rotate-90 duration-300 border border-gray-100 shadow-sm"
               >
                 <XIcon />
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto px-6 py-8 space-y-4">
+            <div className="flex-1 overflow-y-auto px-6 py-8 space-y-3">
               {/* Mobile Language Selector */}
-              <div className="mb-8 p-5 bg-gradient-to-br from-gray-50 to-white rounded-[2.5rem] border border-gray-100 shadow-sm flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#9d174d]/5 rounded-xl flex items-center justify-center text-[#9d174d]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
-                  </div>
-                  <span className="font-bold text-gray-800">Language</span>
-                </div>
-                <div id="google_translate_mobile" className="scale-110 origin-right"></div>
+              <div className="mb-6 flex items-center justify-between p-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                <span className="font-bold text-sm text-gray-600 flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                  Language
+                </span>
+                <div id="google_translate_mobile" className="origin-right scale-90"></div>
               </div>
 
               {[
-                { id: "mob-home", label: "Home", href: "/#home", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg> },
-                { id: "mob-about", label: "About Us", href: "/about", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg> },
-                { id: "mob-services", label: "Our Services", href: "/services", isDropdown: true, icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" /><rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" /></svg> },
-                { id: "mob-blog", label: "Latest Blog", href: "/blog", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16L4 18V2H2v16a4 4 0 0 0 4 4z" /><path d="M12 8h4" /><path d="M12 12h4" /></svg> },
-                { id: "mob-plans", label: "Health Plans", href: "/health-checkup-plans", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></svg> },
-                { id: "mob-hospital", label: "Best Hospital", href: "/best-hospital-nursing-home-hapur", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 21V10a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v11" /><path d="M3 21h18" /><path d="M3 7v14" /><path d="M14 12v.01" /><path d="M18 12v.01" /><path d="M14 16v.01" /><path d="M18 16v.01" /></svg> },
-                { id: "mob-doctors", label: "Expert Doctors", href: "/#doctors", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg> },
-                { id: "mob-treatment", label: "Treatments", href: "/treatment", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20" /><path d="m4.93 4.93 14.14 14.14" /><path d="M2 12h20" /><path d="m19.07 4.93-14.14 14.14" /></svg> },
-                { id: "mob-contact", label: "Contact Us", href: "/contact", icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg> },
+                { label: "Home", href: "/#home" },
+                { label: "About Us", href: "/about" },
+                { label: "Our Services", href: "/services", isDropdown: true },
+                { label: "Blogs", href: "/blog" },
+                { label: "Health Plans", href: "/health-checkup-plans" },
+                { label: "Expert Doctors", href: "/#doctors" },
+                { label: "Testimonials", href: "/#testimonials" },
+                { label: "Treatments", href: "/treatment" },
+                { label: "Contact Us", href: "/contact" },
               ].map((item, index) => (
                 <div
-                  key={item.id}
-                  style={{ animationDelay: `${index * 70}ms` }}
-                  className={`transform transition-all duration-700 ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'}`}
+                  key={item.label}
+                  style={{ animationDelay: `${index * 50}ms`, transitionDelay: `${index * 30}ms` }}
+                  className={`transform transition-all duration-700 ease-out ${isMenuOpen ? 'translate-x-0 opacity-100 blur-0' : 'translate-x-12 opacity-0 blur-sm'}`}
                 >
                   {item.isDropdown ? (
-                    <div className="space-y-3">
+                    <div className="space-y-2">
                       <button
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className={`w-full flex items-center justify-between px-8 py-6 rounded-[2.5rem] transition-all duration-300 group border-2 ${isServicesOpen ? 'bg-[#9d174d] text-white border-[#9d174d] shadow-[0_20px_40px_rgba(157,23,77,0.2)]' : 'bg-white/50 text-gray-800 border-gray-100/50 hover:bg-white hover:border-[#9d174d]/30'}`}
+                        className={`w-full flex items-center justify-between px-5 py-4 text-base font-bold rounded-2xl transition-all group duration-300 border ${isServicesOpen ? 'bg-[#9d174d] text-white border-[#9d174d] shadow-lg shadow-[#9d174d]/20' : 'bg-white text-gray-700 border-gray-100 hover:border-red-100 hover:bg-red-50/50'}`}
                       >
-                        <div className="flex items-center gap-5">
-                          <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 scale-110 ${isServicesOpen ? 'bg-white/20 text-white' : 'bg-[#9d174d]/5 text-[#9d174d]'}`}>
-                            {item.icon}
-                          </div>
-                          <span className="text-2xl font-black tracking-tight">{item.label}</span>
-                        </div>
-                        <ChevronRightIcon className={`w-6 h-6 transition-transform duration-500 ${isServicesOpen ? 'rotate-90' : ''}`} />
+                        {item.label}
+                        <ChevronRightIcon className={`w-5 h-5 transition-transform duration-500 ${isServicesOpen ? 'rotate-90' : ''}`} />
                       </button>
 
-                      <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isServicesOpen ? 'max-h-[1000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                        <div className="grid grid-cols-1 gap-2 pl-4">
-                          {servicesList.map((service, idx) => (
+                      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isServicesOpen ? 'max-h-[800px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                        <div className="pl-4 space-y-2 border-l-2 border-[#9d174d]/10 ml-4 py-2">
+                          {servicesList.map((service, i) => (
                             <Link
                               key={service.slug}
                               href={service.href || `/services/${service.slug}`}
                               onClick={() => setIsMenuOpen(false)}
-                              style={{ transitionDelay: `${idx * 20}ms` }}
-                              className="flex items-center gap-4 px-8 py-5 text-base font-bold text-gray-600 hover:text-[#9d174d] hover:bg-white rounded-3xl transition-all border border-transparent hover:border-red-100 hover:shadow-lg hover:shadow-red-500/5"
+                              style={{ transitionDelay: `${i * 30}ms` }}
+                              className="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-[#9d174d] hover:bg-red-50 rounded-lg transition-all transform hover:translate-x-1"
                             >
-                              <div className="w-2 h-2 rounded-full bg-[#9d174d]/20 transition-all group-hover:bg-[#9d174d] group-hover:scale-150"></div>
                               {service.name}
                             </Link>
                           ))}
@@ -515,40 +518,26 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex items-center justify-between px-8 py-6 bg-white/50 text-gray-800 hover:text-[#9d174d] hover:bg-white rounded-[2.5rem] transition-all duration-500 group border-2 border-gray-100/50 hover:border-[#9d174d]/30 hover:shadow-[0_15px_30px_rgba(157,23,77,0.08)]"
+                      className="flex items-center justify-between px-5 py-4 text-base font-bold text-gray-700 bg-white hover:text-[#9d174d] hover:bg-red-50/50 rounded-2xl transition-all group duration-300 border border-transparent hover:border-red-100 hover:shadow-sm"
                     >
-                      <div className="flex items-center gap-5">
-                        <div className="w-12 h-12 bg-[#9d174d]/5 text-[#9d174d] rounded-2xl flex items-center justify-center group-hover:bg-[#9d174d] group-hover:text-white transition-all duration-500 scale-110">
-                          {item.icon}
-                        </div>
-                        <span className="text-2xl font-black tracking-tight">{item.label}</span>
-                      </div>
-                      <ChevronRightIcon className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-all transform -translate-x-6 group-hover:translate-x-0" />
+                      {item.label}
+                      <ChevronRightIcon className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0 text-[#9d174d]" />
                     </Link>
                   )}
                 </div>
               ))}
-
-              {/* Mobile Translate (Inside list) */}
-              <div className="pt-6 transform transition-all duration-700 delay-500 flex items-center justify-between px-8 py-6 bg-[#9d174d]/5 rounded-[2.5rem] border-2 border-[#9d174d]/10">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#9d174d] shadow-sm">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /><path d="M2 12h20" /></svg>
-                  </div>
-                  <span className="text-xl font-black text-gray-800">Language</span>
-                </div>
-                <div id="google_translate_mobile" className="scale-125 origin-right"></div>
-              </div>
             </div>
 
-            <div className="p-8 space-y-6 bg-white/60 backdrop-blur-3xl border-t border-gray-100 z-40">
+            <div className="p-6 bg-white border-t border-gray-100 relative z-20">
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="group w-full py-6 bg-gradient-to-r from-[#9d174d] via-[#f43f5e] to-[#9d174d] bg-[length:200%_auto] hover:bg-right text-white font-black text-2xl rounded-[2.5rem] shadow-[0_20px_50px_rgba(157,23,77,0.35)] flex items-center justify-center gap-4 transition-all duration-700 active:scale-95 uppercase tracking-tighter"
+                className="w-full py-5 bg-gradient-to-r from-[#9d174d] to-[#be185d] text-white font-black text-lg rounded-2xl shadow-xl shadow-red-500/20 flex items-center justify-center gap-3 transition-transform active:scale-95 hover:shadow-red-500/30 group"
               >
-                APPOINTMENT NOW
-                <ArrowRightIcon />
+                <span>Book Appointment</span>
+                <div className="bg-white/20 p-1 rounded-full group-hover:translate-x-1 transition-transform">
+                  <ArrowRightIcon />
+                </div>
               </Link>
             </div>
           </div>
