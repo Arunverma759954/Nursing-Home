@@ -340,8 +340,8 @@ export default function Navbar() {
             : "py-4"
             }`}
         >
-          <div className="max-w-[1700px] mx-auto px-6 md:px-12 flex items-center justify-between flex-nowrap">
-            <Link href="/" className="flex items-center gap-4 group shrink-0">
+          <div className="max-w-[1700px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 flex items-center justify-between gap-4 flex-nowrap">
+            <Link href="/" className="flex items-center gap-3 sm:gap-4 group shrink-0">
               <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform group-hover:rotate-[360deg] duration-1000">
                 <Image
                   src="/RNH logo.png"
@@ -361,7 +361,7 @@ export default function Navbar() {
               </div>
             </Link>
 
-            <div className="hidden xl:flex items-center gap-1 flex-nowrap">
+            <div className="hidden xl:flex flex-1 items-center justify-center min-w-0 gap-2 sm:gap-3 flex-nowrap">
               {navLinks.slice(0, 2).map((item) => (
                 <Link
                   key={item.label}
@@ -392,7 +392,7 @@ export default function Navbar() {
                     />
                   </svg>
                 </Link>
-                <div className="absolute top-full -left-20 w-[600px] pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+                <div className="absolute top-full left-0 xl:-left-20 w-[min(600px,95vw)] pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
                   <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(157,23,77,0.15)] border border-gray-100 p-4 overflow-hidden grid grid-cols-2 gap-2">
                     {servicesList.map((service) => (
                       <Link

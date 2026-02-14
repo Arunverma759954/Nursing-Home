@@ -111,7 +111,7 @@ export default function Footer() {
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#9d174d]/20 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute top-40 -left-20 w-72 h-72 bg-blue-600/10 rounded-full blur-[80px] pointer-events-none"></div>
 
-      <div className="max-w-[1700px] mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 border-b border-white/5 pb-10 mb-8 relative z-10">
+      <div className="max-w-[1700px] mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 border-b border-white/5 pb-10 mb-8 relative z-10">
         {/* Brand Column */}
         <div className="space-y-5">
           <div className="flex items-center gap-4 group cursor-pointer">
@@ -286,7 +286,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-500">
         <p>{t("footer.copyright")}</p>
         <div className="flex gap-8">
           <Link href="#" className="hover:text-white transition-colors">
