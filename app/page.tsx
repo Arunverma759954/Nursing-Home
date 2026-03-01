@@ -134,75 +134,7 @@ export default function Home() {
 
       {/* INTRO BLOCK – Raj Nursing Home Best Hospital + Why Choose + 24/7 Emergency */}
       <section className="py-8 sm:py-12 md:py-14 bg-white">
-        {/* <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
-          <div className="flex items-start gap-3 mb-4">
-            <span className="w-10 h-10 rounded-lg bg-[#9d174d]/10 flex items-center justify-center text-[#9d174d] shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
-            </span>
-            <div>
-              <h2 className="text-lg md:text-xl lg:text-2xl font-black text-gray-900 leading-tight">{t("home.introBlock.mainTitle")}</h2>
-              <p className="text-[#9d174d] text-sm font-bold mt-1 md:mt-2">{t("home.introBlock.subtitle")}</p>
-            </div>
-          </div>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 max-w-[1100px]">
-            {t("home.introBlock.welcome")}
-          </p>
-          <p className="font-bold text-gray-900 mb-2">{t("home.introBlock.ifSearching")}</p>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-6">
-            {["search1", "search2", "search3", "search4", "search5", "search6"].map((key, i) => (
-              <li key={i} className="flex items-center gap-2 text-gray-700">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] shrink-0" />
-                {t(`home.introBlock.${key}` as const)}
-              </li>
-            ))}
-          </ul>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-10 max-w-[900px]">
-            {t("home.introBlock.concluding")}
-          </p>
-
-          <h3 className="text-lg md:text-xl font-black text-gray-900 mb-4">{t("home.whyChoose.title")}</h3>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 max-w-[900px]">
-            {t("home.whyChoose.protocol")}
-          </p>
-          <ul className="space-y-4 mb-8">
-            <li>
-              <span className="font-bold text-gray-900">✓ {t("home.whyChoose.clinicalTeam")}</span>
-            </li>
-            <li>
-              <span className="font-bold text-gray-900">✓ {t("home.whyChoose.advancedInfraTitle")}</span>
-              <p className="text-gray-600 text-sm md:text-base mt-1">{t("home.whyChoose.advancedInfraDesc")}</p>
-            </li>
-            <li>
-              <span className="font-bold text-gray-900">✓ {t("home.whyChoose.experiencedTeamTitle")}</span>
-              <p className="text-gray-600 text-sm md:text-base mt-1">{t("home.whyChoose.experiencedTeamDesc")}</p>
-            </li>
-            <li>
-              <span className="font-bold text-gray-900">✓ {t("home.whyChoose.affordableTitle")}</span>
-              <p className="text-gray-600 text-sm md:text-base mt-1">{t("home.whyChoose.affordableDesc")}</p>
-            </li>
-          </ul>
-
-          <div className="border-t border-gray-200 pt-8">
-            <div className="flex items-start gap-3 mb-4">
-              <span className="w-10 h-10 rounded-lg bg-[#9d174d]/10 flex items-center justify-center text-[#9d174d] shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
-              </span>
-              <h3 className="text-lg md:text-xl font-black text-gray-900">{t("home.emergency24.title")}</h3>
-            </div>
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4 max-w-[900px]">
-              {t("home.emergency24.intro")}
-            </p>
-            <p className="font-bold text-gray-900 mb-2">{t("home.emergency24.weManage")}</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {["m1", "m2", "m3", "m4", "m5", "m6"].map((key, i) => (
-                <li key={i} className="flex items-center gap-2 text-gray-700">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] shrink-0" />
-                  {t(`home.emergency24.${key}` as const)}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div> */}
+        
         {/* Text - no heavy card, clean left accent */}
             <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
               <div className="border-l-4 border-[#9d174d] pl-5 sm:pl-6">
