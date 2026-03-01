@@ -749,7 +749,7 @@ export default function Home() {
                 </div>
 
                 {/* CTA Button */}
-                <Link href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
+                <Link href="/contact" className="inline-block items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
                   {t("home.departments.bookAppointmentNow")}
                   <ArrowRightIcon />
                 </Link>
