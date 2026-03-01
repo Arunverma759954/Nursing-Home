@@ -286,7 +286,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-4">
-              <div>
+              
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
                 <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
@@ -295,7 +295,7 @@ export default function Home() {
               </div>
 
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.about.title")}{t("home.about.titleHighlight")}</h3>
-              </div>
+              
 
               <p className="text-base text-gray-600 leading-relaxed max-w-prose mb-5">
                 {t("home.about.para")}
@@ -316,7 +316,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <Link href="/about" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
+              <Link href="/about" className="mt-4 inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
                 {t("home.about.cta")} <ChevronRightIcon />
               </Link>
             </div>
@@ -327,7 +327,7 @@ export default function Home() {
       {/* SERVICES */}
       <section id="services" className="pt-10 sm:pt-12 md:pt-16 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12 md:mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
                 <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
                   {t("home.services.label")}
@@ -371,7 +371,7 @@ export default function Home() {
       {/* OUR FACILITY - 9 items grid (screenshot 2) */}
       <section id="facility" className="pb-10 sm:pb-12 md:pb-16 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.ourFacility.label")}</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-3">{t("home.ourFacility.label")}</h3>
           {/* <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" /> */}
         </div>
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -451,8 +451,13 @@ export default function Home() {
       {/* DOCTORS SECTION - Responsive Cards */}
       <section id="doctors" className="py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-10 md:mb-10">
-          <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">{t("home.doctors.label")}</span>
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.doctors.title")} <span className="text-[#9d174d]">{t("home.doctors.titleHighlight")}</span></h3>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+                <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
+                  {t("home.doctors.label")}
+                </span>
+              </div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.doctors.title")} {t("home.doctors.titleHighlight")}</h3>
         </div>
 
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
