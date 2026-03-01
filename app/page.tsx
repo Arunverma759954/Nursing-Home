@@ -620,11 +620,16 @@ export default function Home() {
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-8 sm:mb-10 md:mb-10">
-            <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-sm">{t("home.departments.label")}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+                <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
+                  {t("home.departments.label")}
+                </span>
+              </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">
-              {t("home.departments.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">{t("home.departments.titleHighlight")}</span>
+              {t("home.departments.title")} {t("home.departments.titleHighlight")}
             </h3>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full" />
+            {/* <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full" /> */}
           </div>
 
           <div className="grid lg:grid-cols-[420px,1fr] gap-6 sm:gap-8 lg:gap-12 items-start">
@@ -744,7 +749,7 @@ export default function Home() {
                 </div>
 
                 {/* CTA Button */}
-                <Link href="/contact" className="group px-10 py-5 bg-gradient-to-r from-[#9d174d] to-[#be185d] hover:from-[#831843] hover:to-[#9d174d] text-white font-black text-lg rounded-2xl transition-all duration-500 hover:-translate-y-1 shadow-xl shadow-red-500/30 hover:shadow-2xl hover:shadow-red-500/40 flex items-center justify-center gap-3 inline-flex">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
                   {t("home.departments.bookAppointmentNow")}
                   <ArrowRightIcon />
                 </Link>
