@@ -315,10 +315,10 @@ export default function Home() {
       </section >
 
       {/* SERVICES */}
-      <section id="services" className="py-10 sm:py-12 md:py-16 bg-white">
+      <section id="services" className="pt-10 sm:pt-12 md:pt-16 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12 md:mb-24">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">{t("home.services.label")}</span>
-          <h3 className="text-3xl md:text-4xl font-black text-gray-900 mt-2 md:mt-4">{t("home.services.title")} <span className="text-[#9d174d]">{t("home.services.titleHighlight")}</span></h3>
+          <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.services.title")} <span className="text-[#9d174d]">{t("home.services.titleHighlight")}</span></h3>
         </div>
 
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
@@ -335,7 +335,7 @@ export default function Home() {
               </div>
               <div className="p-6 md:p-10">
                 <h3 className="text-lg md:text-xl font-black text-gray-900 mb-3 md:mb-4">{d.name}</h3>
-                <p className="text-gray-600 text-sm md:text-base mb-6 md:mb-8 leading-relaxed">{d.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">{d.desc}</p>
                 {/* <Link href={`/services/${d.slug}`} className="flex items-center gap-3 text-[#9d174d] font-black text-sm md:text-base group-hover:gap-6 transition-all">
                   {t("home.services.bookService")} <ArrowRightIcon />
                 </Link> */}
