@@ -141,10 +141,10 @@ export default function Home() {
                 <p className="text-[#9d174d] font-bold text-xs uppercase tracking-widest mb-3">
                   {t("home.trustedPartner.badge")}
                 </p>
-                <h2 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">
                   {t("home.trustedPartner.title")}
                 </h2>
-                <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">
+                <p className="text-base text-gray-600 leading-relaxed max-w-prose mb-5">
                   {t("home.trustedPartner.para")}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -203,10 +203,10 @@ export default function Home() {
                   {t("home.ourMedicalServices.title")}
                 </span>
               </div>
-              <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">
                 {t("home.ourMedicalServices.title")}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">
+              <p className="text-base text-gray-600 leading-relaxed max-w-prose mb-5">
                 {t("home.ourMedicalServices.para")}
               </p>
               <div className="pt-4">
@@ -231,10 +231,10 @@ export default function Home() {
                   {t("home.healthServices.title")}
                 </span>
               </div>
-              <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">
                 {t("home.healthServices.title")}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">
+              <p className="text-base text-gray-600 leading-relaxed max-w-prose mb-5">
                 {t("home.healthServices.para")}
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
@@ -284,10 +284,10 @@ export default function Home() {
             <div className="space-y-6 md:space-y-10">
               <div>
                 <span className="text-[#9d174d] font-black tracking-[0.2em] md:tracking-[0.3em] uppercase text-xs md:text-sm">{t("home.about.label")}</span>
-                <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.about.title")} <span className="text-[#9d174d]">{t("home.about.titleHighlight")}</span></h3>
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.about.title")} <span className="text-[#9d174d]">{t("home.about.titleHighlight")}</span></h3>
               </div>
 
-              <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">
+              <p className="text-base text-gray-600 leading-relaxed max-w-prose mb-5">
                 {t("home.about.para")}
               </p>
 
@@ -318,7 +318,7 @@ export default function Home() {
       <section id="services" className="pt-10 sm:pt-12 md:pt-16 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12 md:mb-12">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">{t("home.services.label")}</span>
-          <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.services.title")} <span className="text-[#9d174d]">{t("home.services.titleHighlight")}</span></h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.services.title")} <span className="text-[#9d174d]">{t("home.services.titleHighlight")}</span></h3>
         </div>
 
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
@@ -335,7 +335,7 @@ export default function Home() {
               </div>
               <div className="p-6 md:p-10">
                 <h3 className="text-lg md:text-xl font-black text-gray-900 mb-3 md:mb-4">{d.name}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">{d.desc}</p>
+                <p className="text-base text-gray-600 leading-relaxed max-w-prose mb-5">{d.desc}</p>
                 {/* <Link href={`/services/${d.slug}`} className="flex items-center gap-3 text-[#9d174d] font-black text-sm md:text-base group-hover:gap-6 transition-all">
                   {t("home.services.bookService")} <ArrowRightIcon />
                 </Link> */}
@@ -355,7 +355,7 @@ export default function Home() {
       {/* OUR FACILITY - 9 items grid (screenshot 2) */}
       <section id="facility" className="pb-10 sm:pb-12 md:pb-16 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
-          <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.ourFacility.label")}</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.ourFacility.label")}</h3>
           <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" />
         </div>
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -436,7 +436,7 @@ export default function Home() {
       <section id="doctors" className="py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-10 md:mb-10">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">{t("home.doctors.label")}</span>
-          <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.doctors.title")} <span className="text-[#9d174d]">{t("home.doctors.titleHighlight")}</span></h3>
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">{t("home.doctors.title")} <span className="text-[#9d174d]">{t("home.doctors.titleHighlight")}</span></h3>
         </div>
 
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -600,7 +600,7 @@ export default function Home() {
           {/* Section Title */}
           <div className="text-center mb-8 sm:mb-10 md:mb-10">
             <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-sm">{t("home.departments.label")}</span>
-            <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-4">
               {t("home.departments.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">{t("home.departments.titleHighlight")}</span>
             </h3>
             <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full" />
