@@ -335,9 +335,9 @@ export default function Navbar() {
                 />
               </div>
               <div className="flex flex-col min-w-0 max-w-[120px] min-[400px]:max-w-[150px] sm:max-w-[200px]">
-                <h1 className="text-[10px] sm:text-sm md:text-base lg:text-lg font-black text-[#9d174d] tracking-tight leading-none uppercase truncate">
+                <p className="text-[10px] sm:text-sm md:text-base lg:text-lg font-black text-[#9d174d] tracking-tight leading-none uppercase truncate">
                   {t("nav.rajNursingHome")}
-                </h1>
+                </p>
                 <p className="text-[5px] sm:text-[7px] md:text-[8px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 leading-tight hidden min-[400px]:block">
                   {t("nav.excellenceSince")}
                 </p>
