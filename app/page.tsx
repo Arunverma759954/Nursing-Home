@@ -135,6 +135,7 @@ export default function Home() {
       {/* INTRO BLOCK – Raj Nursing Home Best Hospital + Why Choose + 24/7 Emergency */}
       <section className="py-8 sm:py-12 md:py-14 bg-white">
         
+        
         {/* Text - no heavy card, clean left accent */}
             <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
               <div className="border-l-4 border-[#9d174d] pl-5 sm:pl-6">
@@ -159,8 +160,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
+          
       </section>
 
       {/* NEW SECTION 1: OUR MEDICAL SERVICES (Image Left, Text Right) */}
@@ -353,6 +353,8 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+        </div>
         </div>
       </section >
 
