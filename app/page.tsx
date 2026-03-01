@@ -770,11 +770,16 @@ export default function Home() {
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 relative z-10 text-center">
           {/* Section Title */}
           <div className="mb-8 sm:mb-12 md:mb-16">
-            <span className="text-red-400 font-black tracking-[0.3em] uppercase text-sm">{t("home.testimonials.label")}</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+                <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
+                  {t("home.testimonials.label")}
+                </span>
+              </div>
             <h3 className="text-3xl md:text-4xl font-black text-white mt-4">
-              {t("home.testimonials.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">{t("home.testimonials.titleHighlight")}</span>
+              {t("home.testimonials.title")} {t("home.testimonials.titleHighlight")}
             </h3>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full mt-6" />
+            {/* <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full mt-6" /> */}
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -794,7 +799,7 @@ export default function Home() {
                 </div>
 
                 {/* Text */}
-                <p className="text-base sm:text-lg md:text-2xl leading-relaxed font-medium text-gray-200 italic mb-6 sm:mb-8">
+                <p className="text-base sm:text-lg leading-relaxed font-medium text-gray-200 italic mb-6 sm:mb-8">
                   "{[t("home.testimonials.testimonial1"), t("home.testimonials.testimonial2"), t("home.testimonials.testimonial3")][activeTestimonial]}"
                 </p>
 
@@ -897,9 +902,14 @@ export default function Home() {
 
       {/* FACILITIES (Secondary) */}
       <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
-        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-12 sm:mb-16 md:mb-24">
-          <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-sm">{t("home.facilities.label")}</span>
-          <h3 className="text-3xl md:text-4xl font-black text-gray-900 mt-4">{t("home.facilities.title")} <span className="text-[#9d174d]">{t("home.facilities.titleHighlight")}</span></h3>
+        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-10 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+                <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
+                  {t("home.facilities.label")}
+                </span>
+              </div>
+          <h3 className="text-3xl md:text-4xl font-black text-gray-900 mt-4">{t("home.facilities.title")} {t("home.facilities.titleHighlight")}</h3>
         </div>
 
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
@@ -924,10 +934,10 @@ export default function Home() {
       </section>
 
       {/* MEDIA GALLERY - 2x3 grid (screenshot 3) */}
-      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
+      <section className="pb-10 sm:pb-14 md:pb-16 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
           <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{t("home.mediaGallery.label")}</h3>
-          <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" />
+          {/* <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" /> */}
         </div>
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
           {[
@@ -949,7 +959,7 @@ export default function Home() {
       <section className="py-10 sm:py-14 md:py-16 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
           <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{t("home.newsHealthTips.label")}</h3>
-          <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" />
+          {/* <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" /> */}
         </div>
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid sm:grid-cols-3 gap-6 md:gap-8">
           {[
@@ -979,12 +989,12 @@ export default function Home() {
       <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 mb-2">
-            <span className="w-10 h-10 rounded-lg bg-[#9d174d]/10 flex items-center justify-center text-[#9d174d] shrink-0">
+            {/* <span className="w-10 h-10 rounded-lg bg-[#9d174d]/10 flex items-center justify-center text-[#9d174d] shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" /></svg>
-            </span>
+            </span> */}
             <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{t("home.faq.label")}</h3>
           </div>
-          <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" />
+          {/* <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" /> */}
         </div>
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 space-y-2">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
@@ -997,7 +1007,7 @@ export default function Home() {
                 <span className={`shrink-0 transition-transform ${openFaq === n ? "rotate-180" : ""}`}><ChevronDownIcon className={openFaq === n ? "text-white" : "text-gray-600"} /></span>
               </button>
               {openFaq === n && (
-                <div className="px-4 md:px-5 pb-4 md:pb-5 pt-0 text-gray-600 text-sm md:text-base leading-snug border-t border-gray-100">
+                <div className="px-4 md:px-5 py-4 md:py-5 text-gray-600 text-sm md:text-base leading-snug border-t border-gray-100">
                   {t(`home.faq.a${n}` as const)}
                 </div>
               )}
