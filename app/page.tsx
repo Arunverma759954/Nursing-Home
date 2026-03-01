@@ -316,7 +316,7 @@ export default function Home() {
 
       {/* SERVICES */}
       <section id="services" className="pt-10 sm:pt-12 md:pt-16 bg-white">
-        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12 md:mb-24">
+        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12 md:mb-12">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">{t("home.services.label")}</span>
           <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.services.title")} <span className="text-[#9d174d]">{t("home.services.titleHighlight")}</span></h3>
         </div>
@@ -353,9 +353,9 @@ export default function Home() {
       </section >
 
       {/* OUR FACILITY - 9 items grid (screenshot 2) */}
-      <section id="facility" className="py-10 sm:py-12 md:py-16 bg-white">
+      <section id="facility" className="pb-10 sm:pb-12 md:pb-16 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
-          <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{t("home.ourFacility.label")}</h3>
+          <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.ourFacility.label")}</h3>
           <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" />
         </div>
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -433,10 +433,10 @@ export default function Home() {
 
       {/* DOCTORS */}
       {/* DOCTORS SECTION - Responsive Cards */}
-      <section id="doctors" className="py-12 sm:py-16 md:py-24 bg-gray-50 overflow-hidden">
-        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-10 md:mb-16">
+      <section id="doctors" className="py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
+        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-10 md:mb-10">
           <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-xs md:text-sm">{t("home.doctors.label")}</span>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 mt-2 md:mt-4 tracking-tighter">{t("home.doctors.title")} <span className="text-[#9d174d]">{t("home.doctors.titleHighlight")}</span></h3>
+          <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">{t("home.doctors.title")} <span className="text-[#9d174d]">{t("home.doctors.titleHighlight")}</span></h3>
         </div>
 
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -591,16 +591,16 @@ export default function Home() {
       </section>
 
       {/* DEPARTMENT SECTION - Premium Modern Design */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-red-50/30 relative overflow-hidden">
+      <section className="py-10 sm:py-12 md:py-16 bg-gradient-to-br from-gray-50 via-white to-red-50/30 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-100 rounded-full blur-[120px] opacity-30" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#9d174d]/10 rounded-full blur-[120px] opacity-40" />
 
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 relative z-10">
           {/* Section Title */}
-          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="text-center mb-8 sm:mb-10 md:mb-10">
             <span className="text-[#9d174d] font-black tracking-[0.3em] uppercase text-sm">{t("home.departments.label")}</span>
-            <h3 className="text-3xl md:text-4xl font-black text-gray-900 mt-4 mb-3">
+            <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
               {t("home.departments.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">{t("home.departments.titleHighlight")}</span>
             </h3>
             <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full" />
