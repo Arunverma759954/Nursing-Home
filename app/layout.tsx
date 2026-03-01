@@ -24,8 +24,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Raj Nursing Home | Best Multi-Speciality Hospital in Hapur",
-  description: "Raj Nursing Home provides world-class healthcare, laparoscopic surgery, IVF, and diagnostic services in Hapur, Uttar Pradesh.",
+  title: "Best Hospital & Nursing Home in Hapur | 24*7 Emergency Hospital",
+  description: "Raj Hospital &amp; Nursing Home is a trusted hospital and nursing home in Hapur offering expert medical care, 24×7 emergency services, maternity care and surgeries for families.",
 };
 
 export default function RootLayout({
