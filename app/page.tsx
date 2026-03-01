@@ -132,12 +132,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INTRO BLOCK – Raj Nursing Home Best Hospital + Why Choose + 24/7 Emergency */}
-      <section className="py-8 sm:py-12 md:py-14 bg-white">
-        
-        
-        {/* Text - no heavy card, clean left accent */}
-            <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
+       {/* TRUSTED PARTNER - clean two-column */}
+      <section className="py-14 sm:py-16 md:py-20 bg-white overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+<div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
               <div className="border-l-4 border-[#9d174d] pl-5 sm:pl-6">
                 <p className="text-[#9d174d] font-bold text-xs uppercase tracking-widest mb-3">
                   {t("home.trustedPartner.badge")}
@@ -160,7 +159,21 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          
+            {/* Image - simple, no overlay text */}
+            <div className="w-full lg:w-[42%] shrink-0 order-2 lg:order-1">
+              <div className="relative aspect-[4/3] max-h-[320px] lg:max-h-[380px] rounded-xl overflow-hidden bg-gray-100">
+                <Image
+                  src="/raj/cabin3.jpg"
+                  alt="Raj Hospital - Care at Hapur"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                />
+              </div>
+            </div>
+  </div>
+        </div>
+            
       </section>
 
       {/* NEW SECTION 1: OUR MEDICAL SERVICES (Image Left, Text Right) */}
@@ -253,28 +266,6 @@ export default function Home() {
           </div>
         </div>
       </section >
-
-      {/* TRUSTED PARTNER - clean two-column */}
-      <section className="py-14 sm:py-16 md:py-20 bg-white overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-            {/* Image - simple, no overlay text */}
-            <div className="w-full lg:w-[42%] shrink-0 order-2 lg:order-1">
-              <div className="relative aspect-[4/3] max-h-[320px] lg:max-h-[380px] rounded-xl overflow-hidden bg-gray-100">
-                <Image
-                  src="/raj/cabin3.jpg"
-                  alt="Raj Hospital - Care at Hapur"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-              </div>
-            </div>
-  </div>
-        </div>
-            
-      </section>
-
       {/* ABOUT SECTION */}
       <section id="about" className="py-10 sm:py-12 md:py-16 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
