@@ -384,7 +384,7 @@ export default function Home() {
       </section >
 
       {/* DETAILED SERVICES – Critical Care intro + Cardiology, Internal, Surgery, Diagnostic, Women's, Lifestyle, Infectious */}
-      < section className="py-12 sm:py-16 md:py-24 bg-gray-50" >
+      {/* < section className="py-12 sm:py-16 md:py-24 bg-gray-50" >
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-2">{t("home.criticalCareIntro.p1")}</p>
           <p className="font-bold text-gray-900 mb-10 md:mb-12">{t("home.criticalCareIntro.p2")}</p>
@@ -429,7 +429,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section >
+      </section > */}
 
       {/* DOCTORS */}
       {/* DOCTORS SECTION - Responsive Cards */}
@@ -822,7 +822,7 @@ export default function Home() {
       </section>
 
       {/* SERVING HAPUR & NEARBY AREAS */}
-      <section className="py-8 sm:py-12 md:py-14 bg-white">
+      {/* <section className="py-8 sm:py-12 md:py-14 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="flex items-start gap-3 mb-4">
             <span className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center text-teal-600 shrink-0">
@@ -843,10 +843,10 @@ export default function Home() {
           </ul>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed ml-0 md:ml-[52px]">{t("home.servingAreas.end")}</p>
         </div>
-      </section>
+      </section> */}
 
       {/* OUR COMMITMENT TO SAFE & ETHICAL HEALTHCARE */}
-      <section className="py-8 sm:py-12 md:py-14 bg-gray-50">
+      {/* <section className="py-8 sm:py-12 md:py-14 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="flex items-start gap-3 mb-4">
             <span className="w-10 h-10 rounded-lg bg-gray-200 flex items-center justify-center text-gray-600 shrink-0">
@@ -867,7 +867,7 @@ export default function Home() {
           </ul>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed ml-0 md:ml-[52px] font-medium">{t("home.commitment.end")}</p>
         </div>
-      </section>
+      </section> */}
 
       {/* FACILITIES (Secondary) */}
       <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
@@ -981,7 +981,7 @@ export default function Home() {
       </section>
 
       {/* BOOK APPOINTMENT - 24/7 SUPPORT CTA */}
-      <section className="py-10 sm:py-14 md:py-16 bg-[#9d174d]">
+      {/* <section className="py-10 sm:py-14 md:py-16 bg-[#9d174d]">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="flex items-start gap-3 mb-6">
             <span className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center text-white shrink-0 [&_svg]:text-white">
@@ -1000,7 +1000,7 @@ export default function Home() {
             {t("footer.bookAppointment")} <ArrowRightIcon />
           </Link>
         </div>
-      </section>
+      </section> */}
 
     </div >
   );
