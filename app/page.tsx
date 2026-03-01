@@ -200,7 +200,7 @@ export default function Home() {
             </div>
 
             {/* Text Side */}
-            <div className="w-full lg:w-1/2 space-y-6 md:space-y-8">
+            <div className="w-full lg:w-1/2 space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
                 <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
@@ -214,7 +214,7 @@ export default function Home() {
                 {t("home.ourMedicalServices.para")}
               </p>
               <div className="pt-4">
-                <Link href="#contact" className="px-8 py-4 bg-[#9d174d] text-white font-black rounded-2xl hover:bg-[#831843] transition-all shadow-xl hover:shadow-[#9d174d]/20 inline-flex items-center gap-3">
+                <Link href="#contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
                   {t("nav.bookAppointment")} <ArrowRightIcon />
                 </Link>
               </div>
