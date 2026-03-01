@@ -135,7 +135,7 @@ export default function Home() {
        {/* TRUSTED PARTNER - clean two-column */}
       <section className="py-14 sm:py-16 md:py-20 bg-white overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+          <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-12 items-center">
 <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
               <div className="border-l-4 border-[#9d174d] pl-5 sm:pl-6">
                 <p className="text-[#9d174d] font-bold text-xs uppercase tracking-widest mb-3">
