@@ -284,7 +284,7 @@ export default function Navbar() {
                   {t("nav.sendUsMail")}
                 </span>
                 <span className="text-sm font-black">
-                  drvipinkumar@gmail.com
+                  drvipinkumarsharma@gmail.com
                 </span>
               </div>
             </a>
