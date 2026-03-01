@@ -139,7 +139,7 @@ export default function Home() {
 <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
               <div className="border-l-4 border-[#9d174d] pl-5 sm:pl-6">
               
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
                 <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
                   {t("home.trustedPartner.badge")}
