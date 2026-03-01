@@ -325,9 +325,6 @@ export default function Home() {
           {[
             { name: t("home.services.heart"), slug: "heart-specialist", img: "/heart-care.jpg", desc: t("home.services.heartDesc"), icon: "❤️" },
             { name: t("home.services.internal"), slug: "internal-medicine", img: "/internal1.jpg", desc: t("home.services.internalDesc"), icon: "🩺" },
-            { name: t("home.services.lap"), slug: "laparoscopic-surgery", img: "/laparoscopic2.jpg", desc: t("home.services.lapDesc"), icon: "🔬" },
-            { name: t("home.services.diagnostic"), slug: "diagnostic-services", img: "/Diagnostic3.jpg", desc: t("home.services.diagnosticDesc"), icon: "🔍" },
-            { name: t("home.services.ivf"), slug: "ivf-and-fertility", img: "/IVF2.jpg", desc: t("home.services.ivfDesc"), icon: "👶" },
             { name: t("home.services.woman"), slug: "womens-health-in-hapur", img: "/raj/gyne-2.jpg", desc: t("home.services.womanDesc"), icon: "💗" },
           ].map((d, i) => (
             <div key={i} className="group relative bg-white border border-gray-100 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-[0_40px_80px_rgba(157,23,77,0.15)] transition-all duration-700 hover:-translate-y-4">
@@ -339,9 +336,9 @@ export default function Home() {
               <div className="p-6 md:p-10">
                 <h3 className="text-lg md:text-xl font-black text-gray-900 mb-3 md:mb-4">{d.name}</h3>
                 <p className="text-gray-600 text-sm md:text-base mb-6 md:mb-8 leading-relaxed">{d.desc}</p>
-                <Link href={`/services/${d.slug}`} className="flex items-center gap-3 text-[#9d174d] font-black text-sm md:text-base group-hover:gap-6 transition-all">
+                {/* <Link href={`/services/${d.slug}`} className="flex items-center gap-3 text-[#9d174d] font-black text-sm md:text-base group-hover:gap-6 transition-all">
                   {t("home.services.bookService")} <ArrowRightIcon />
-                </Link>
+                </Link> */}
               </div>
             </div>
           ))}
