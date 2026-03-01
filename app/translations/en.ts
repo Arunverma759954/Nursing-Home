@@ -256,28 +256,37 @@ export const en = {
       label: "News and Health Tips",
     },
     faq: {
-      label: "FAQ",
-      q1: "What emergency services are available 24/7 at Raj Hospital and Nursing Home?",
-      a1: "Our emergency department handles cardiac emergencies, accidents, critical injuries, and acute illnesses with immediate ICU access. We offer: • Free ambulance service within 5km radius • 24/7 pharmacy and blood bank access • Direct admission protocol for faster treatment",
-      q2: "How quickly can I see a doctor in an emergency?",
-      a2: "Our triage team assesses patients within 5 minutes of arrival. Critical cases receive immediate specialist attention from Dr. Vipin Sharma (Cardiology) or Dr. M.C. Sharma (Surgery).",
-      q3: "Which specialists are available at Raj Hospital and Nursing Home?",
-      a3: "Our senior medical team includes: • Dr. Vipin Sharma: Ex-Safdarjung Hospital cardiologist (15+ years experience) • Dr. M.C. Sharma: Laparoscopic surgery specialist (500+ successful operations) • Dr. Shruti Bhardwaj: Leading gynecologist for high-risk pregnancies",
-      q4: "Can I consult a female gynecologist?",
-      a4: "Yes, Dr. Shruti Bhardwaj (MS Gynecology) provides confidential consultations for pregnancy, PCOS, and menstrual disorders with a dedicated women's care ward.",
-      q5: "What advanced tests do you offer?",
-      a5: "We provide same-day reports for: • Cardiac diagnostics: ECG, 2D Echo, PFT • Digital imaging: Ultrasound, X-Ray • Surgical pre-op tests for laparoscopic procedures",
-      q6: "How accurate are your lab reports?",
-      a6: "Our NABL-standard lab uses automated analyzers with dual verification by MD pathologists. Reports include clinical interpretations (not just data) for actionable insights.",
-      q7: "What makes your laparoscopic surgery special?",
-      a7: "Dr. M.C. Sharma's keyhole surgery techniques offer: • 70% faster recovery vs open surgery • Minimal scarring (1cm incisions) • Next-day discharge for appendix/gallbladder cases",
-      q8: "Do you handle pregnancy deliveries?",
-      a8: "Yes, Dr. Shruti Bhardwaj leads our maternity wing with • 24/7 delivery suites with fetal monitoring • High-risk pregnancy management • Painless delivery options",
-      q9: "What are routine consultation hours?",
-      a9: "Morning: 9 AM - 2 PM | Evening: 6 PM - 8 PM. Cardiologist Dr. Vipin Sharma only available by prior appointment.",
-      q10: "Do you treat diabetes and thyroid disorders?",
-      a10: "Yes, our internal medicine and lifestyle clinic specializes in diabetes and thyroid care.",
-    },
+  label: "FAQ",
+  q1: "What emergency services are available 24/7 at Raj Hospital and Nursing Home?",
+  a1: "Our emergency department handles cardiac emergencies, accidents, critical injuries, and acute illnesses with immediate ICU access. We offer: • Free ambulance service within 5km radius • 24/7 pharmacy and blood bank access • Direct admission protocol for faster treatment",
+
+  q2: "How quickly can I see a doctor in an emergency?",
+  a2: "Our triage team assesses patients within 5 minutes of arrival. Critical cases receive immediate specialist attention from Dr. Vipin Sharma (Cardiology) or Dr. M.C. Sharma (Surgery).",
+
+  q3: "Which specialists are available at Raj Hospital and Nursing Home?",
+  a3: "Our senior medical team includes: • Dr. Vipin Sharma: Ex-Safdarjung Hospital cardiologist (15+ years experience) • Dr. M.C. Sharma: Laparoscopic surgery specialist (500+ successful operations) • Dr. Shruti Bhardwaj: Leading gynecologist for high-risk pregnancies",
+
+  q4: "Can I consult a female gynecologist?",
+  a4: "Yes, Dr. Shruti Bhardwaj (MS Gynecology) provides confidential consultations for pregnancy, PCOS, and menstrual disorders with a dedicated women's care ward.",
+
+  q5: "What advanced tests do you offer?",
+  a5: "We provide same-day reports for: • Cardiac diagnostics: ECG, 2D Echo, PFT • Digital imaging: Ultrasound, X-Ray • Surgical pre-op tests for laparoscopic procedures",
+
+  q6: "How accurate are your lab reports?",
+  a6: "Our NABL-standard lab uses automated analyzers with dual verification by MD pathologists. Reports include clinical interpretations (not just data) for actionable insights.",
+
+  q7: "What makes your laparoscopic surgery special?",
+  a7: "Dr. M.C. Sharma’s keyhole surgery techniques offer: • 70% faster recovery vs open surgery • Minimal scarring (1cm incisions) • Next-day discharge for appendix/gallbladder cases",
+
+  q8: "Do you handle pregnancy deliveries?",
+  a8: "Yes, Dr. Shruti Bhardwaj leads our maternity wing with: • 24/7 delivery suites with fetal monitoring • High-risk pregnancy management • Painless delivery options",
+
+  q9: "What are routine consultation hours?",
+  a9: "Morning: 9 AM - 2 PM | Evening: 6 PM - 8 PM. Cardiologist Dr. Vipin Sharma is available only by prior appointment.",
+
+  q10: "How do I book appointments with specialists?",
+  a10: "Choose your preferred method: • Call directly: Dr. Vipin (6397970802), Dr. Shruti (7895868448) • WhatsApp 'BOOK' to +916397970802 • Use the online portal"
+},
     introBlock: {
       mainTitle: "Raj Nursing Home – Best Hospital & Nursing Home In Hapur",
       subtitle: "Advanced, Ethical & 24/7 Healthcare in Hapur",
