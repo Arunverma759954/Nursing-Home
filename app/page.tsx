@@ -144,7 +144,7 @@ export default function Home() {
                 <h2 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
                   {t("home.trustedPartner.title")}
                 </h2>
-                <p className="text-sm text-gray-600 leading-snug max-w-prose mb-5">
+                <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">
                   {t("home.trustedPartner.para")}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* NEW SECTION 1: OUR MEDICAL SERVICES (Image Left, Text Right) */}
-      <section className="py-10 sm:py-12 md:py-16 bg-white overflow-hidden">
+      <section className="pb-10 sm:pb-12 md:py-16 bg-white overflow-hidden">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16">
             {/* Image Side */}
@@ -203,10 +203,10 @@ export default function Home() {
                   {t("home.ourMedicalServices.title")}
                 </span>
               </div>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-[1.1]">
+              <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
                 {t("home.ourMedicalServices.title")}
               </h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
+              <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">
                 {t("home.ourMedicalServices.para")}
               </p>
               <div className="pt-4">
@@ -231,10 +231,10 @@ export default function Home() {
                   {t("home.healthServices.title")}
                 </span>
               </div>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-[1.1]">
+              <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
                 {t("home.healthServices.title")}
               </h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
+              <p className="text-sm text-gray-600 leading-relaxed max-w-prose mb-5">
                 {t("home.healthServices.para")}
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
@@ -267,7 +267,7 @@ export default function Home() {
         </div>
       </section >
       {/* ABOUT SECTION */}
-      <section id="about" className="py-10 sm:py-12 md:py-16 bg-gray-50">
+      <section id="about" className="pb-10 sm:pb-12 md:py-16 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
             <div className="grid grid-cols-2 gap-3 md:gap-6">
