@@ -342,13 +342,13 @@ export default function Home() {
               </div>
             </div>
           ))}
-           <div className="p-6 md:p-10 text-center">
-             /* {t("home.services.bookService")} */
-                <Link href={`/services`} className="inline-block flex items-center gap-3 text-[#9d174d] font-black text-sm md:text-base group-hover:gap-6 transition-all">
-                  View Details <ArrowRightIcon />
+           
+        </div>
+        <div className="p-6 md:p-10 text-center">
+            <Link href="/services" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
+                 View Details <ArrowRightIcon />
                 </Link>
               </div>
-        </div>
       
       </section >
 
