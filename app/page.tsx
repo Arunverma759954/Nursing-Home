@@ -134,7 +134,7 @@ export default function Home() {
 
       {/* INTRO BLOCK – Raj Nursing Home Best Hospital + Why Choose + 24/7 Emergency */}
       <section className="py-8 sm:py-12 md:py-14 bg-white">
-        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
+        {/* <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="flex items-start gap-3 mb-4">
             <span className="w-10 h-10 rounded-lg bg-[#9d174d]/10 flex items-center justify-center text-[#9d174d] shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
@@ -201,6 +201,32 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div> */}
+        {/* Text - no heavy card, clean left accent */}
+            <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
+              <div className="border-l-4 border-[#9d174d] pl-5 sm:pl-6">
+                <p className="text-[#9d174d] font-bold text-xs uppercase tracking-widest mb-3">
+                  {t("home.trustedPartner.badge")}
+                </p>
+                <h2 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
+                  {t("home.trustedPartner.title")}
+                </h2>
+                <p className="text-sm text-gray-600 leading-snug max-w-prose mb-5">
+                  {t("home.trustedPartner.para")}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {["highlight1", "highlight2", "highlight3", "highlight4"].map((key) => (
+                    <span key={key} className="inline-block px-2.5 py-1 bg-gray-50 text-gray-700 text-[11px] font-medium rounded-md">
+                      {t(("home.trustedPartner." + key) as "home.trustedPartner.highlight1")}
+                    </span>
+                  ))}
+                </div>
+                <Link href="/services" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
+                  {t("home.trustedPartner.ctaButton")} <ArrowRightIcon />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -313,32 +339,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Text - no heavy card, clean left accent */}
-            <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
-              <div className="border-l-4 border-[#9d174d] pl-5 sm:pl-6">
-                <p className="text-[#9d174d] font-bold text-xs uppercase tracking-widest mb-3">
-                  {t("home.trustedPartner.badge")}
-                </p>
-                <h3 className="text-xl sm:text-2xl md:text-[1.6rem] font-bold text-gray-900 leading-snug mb-4">
-                  {t("home.trustedPartner.title")}
-                </h3>
-                <p className="text-sm text-gray-600 leading-snug max-w-prose mb-5">
-                  {t("home.trustedPartner.para")}
-                </p>
-                <div className="flex flex-wrap gap-1.5 mb-5">
-                  {["highlight1", "highlight2", "highlight3", "highlight4"].map((key) => (
-                    <span key={key} className="inline-block px-2.5 py-1 bg-gray-50 text-gray-700 text-[11px] font-medium rounded-md">
-                      {t(("home.trustedPartner." + key) as "home.trustedPartner.highlight1")}
-                    </span>
-                  ))}
-                </div>
-                <Link href="/services" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
-                  {t("home.trustedPartner.ctaButton")} <ArrowRightIcon />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+            
       </section>
 
       {/* ABOUT SECTION */}
