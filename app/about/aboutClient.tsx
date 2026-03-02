@@ -138,58 +138,56 @@ export default function AboutClientPage() {
 
 
 {/* MISSION & VISION SECTION - REDESIGNED */}
-<section className="py-10 sm:py-14 md:py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+<section className="py-10 sm:py-14 md:py-16 bg-gradient-to-br from-gray-50 via-white to-red-50/30 relative overflow-hidden">
   {/* Decorative elements */}
-  <div className="absolute top-0 left-0 w-full h-full">
-    <div className="absolute top-20 right-20 w-72 h-72 bg-[#9d174d]/5 rounded-full blur-[100px]" />
-    <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-500/5 rounded-full blur-[100px]" />
-  </div>
+  <div className="absolute top-0 right-0 w-96 h-96 bg-red-100 rounded-full blur-[120px] opacity-30" />
+  <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#9d174d]/10 rounded-full blur-[120px] opacity-40" />
 
   <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 relative z-10">
     {/* Section Header */}
-    <div className="text-center mb-16">
+    <div className="text-center mb-8 sm:mb-10 md:mb-16">
       <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
         <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
-        <span className="text-[#9d174d] font-black tracking-widest uppercase text-xs">
+        <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
           OUR PURPOSE
         </span>
       </div>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-4">
         Driving{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] via-[#f43f5e] to-[#9d174d]">
           Healthcare Excellence
         </span>
       </h2>
-      <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] rounded-full mx-auto mt-6" />
+      <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full" />
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
+    <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
       {/* Mission Card */}
-      <div className="group bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+      <div className="group bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden hover:shadow-[0_40px_80px_rgba(157,23,77,0.15)] transition-all duration-700 hover:-translate-y-4">
         {/* Card Header with Icon */}
-        <div className="relative h-48 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] p-8 flex items-end">
+        <div className="relative h-48 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] p-6 md:p-8 flex items-end">
           <div className="absolute top-8 right-8 text-8xl opacity-20">🎯</div>
           <div>
-            <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4">
-              <span className="text-4xl">🎯</span>
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl flex items-center justify-center mb-4">
+              <span className="text-3xl md:text-4xl">🎯</span>
             </div>
-            <h3 className="text-3xl md:text-4xl font-black text-white">Our Mission</h3>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white">Our Mission</h3>
           </div>
         </div>
 
         {/* Card Content */}
-        <div className="p-8 md:p-10">
-          <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
+        <div className="p-6 md:p-8 lg:p-10">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 font-medium">
             Our mission is to provide quality and affordable healthcare in Hapur with care and honesty.
           </p>
 
-          <div className="space-y-6">
-            <p className="text-xl font-bold text-[#9d174d] flex items-center gap-2">
+          <div className="space-y-4 md:space-y-6">
+            <p className="text-lg md:text-xl font-bold text-[#9d174d] flex items-center gap-2">
               <span className="w-1 h-6 bg-[#9d174d] rounded-full" />
               We are committed to:
             </p>
             
-            <ul className="space-y-4">
+            <ul className="space-y-3 md:space-y-4">
               {[
                 "Providing 24/7 emergency and medical services",
                 "Offering safe pregnancy care and women's health treatment",
@@ -197,19 +195,19 @@ export default function AboutClientPage() {
                 "Ensuring proper consultation and personalized patient care",
                 "Using modern medical equipment for accurate treatment",
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4 group/item">
-                  <span className="w-6 h-6 rounded-full bg-[#9d174d]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#9d174d] group-hover/item:text-white transition-colors">
-                    <span className="text-xs">✓</span>
+                <li key={i} className="flex items-start gap-3 md:gap-4 group/item">
+                  <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#9d174d]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#9d174d] group-hover/item:text-white transition-colors">
+                    <span className="text-[10px] md:text-xs">✓</span>
                   </span>
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-sm md:text-base text-gray-700">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-gray-100">
-            <p className="text-gray-600 italic flex items-start gap-3">
-              <span className="text-3xl">💭</span>
+          <div className="mt-6 md:mt-8 pt-6 border-t border-gray-100">
+            <p className="text-gray-500 text-sm md:text-base italic flex items-start gap-3">
+              <span className="text-2xl md:text-3xl">💭</span>
               <span>Our goal is to treat every patient with compassion, respect, and professionalism.</span>
             </p>
           </div>
@@ -217,50 +215,50 @@ export default function AboutClientPage() {
       </div>
 
       {/* Vision Card */}
-      <div className="group bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+      <div className="group bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden hover:shadow-[0_40px_80px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-4">
         {/* Card Header with Icon */}
-        <div className="relative h-48 bg-gradient-to-r from-blue-600 to-blue-400 p-8 flex items-end">
+        <div className="relative h-48 bg-gradient-to-r from-blue-600 to-blue-400 p-6 md:p-8 flex items-end">
           <div className="absolute top-8 right-8 text-8xl opacity-20">👁️</div>
           <div>
-            <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4">
-              <span className="text-4xl">👁️</span>
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl flex items-center justify-center mb-4">
+              <span className="text-3xl md:text-4xl">👁️</span>
             </div>
-            <h3 className="text-3xl md:text-4xl font-black text-white">Our Vision</h3>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white">Our Vision</h3>
           </div>
         </div>
 
         {/* Card Content */}
-        <div className="p-8 md:p-10">
-          <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
+        <div className="p-6 md:p-8 lg:p-10">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 font-medium">
             Our vision is to become a trusted multi-specialty hospital in Hapur and nearby areas.
           </p>
 
-          <div className="space-y-6">
-            <p className="text-xl font-bold text-blue-600 flex items-center gap-2">
+          <div className="space-y-4 md:space-y-6">
+            <p className="text-lg md:text-xl font-bold text-blue-600 flex items-center gap-2">
               <span className="w-1 h-6 bg-blue-600 rounded-full" />
               We aim to:
             </p>
             
-            <ul className="space-y-4">
+            <ul className="space-y-3 md:space-y-4">
               {[
                 "Provide reliable and advanced medical treatment",
                 "Support families with complete healthcare solutions",
                 "Maintain high standards of safety and hygiene",
                 "Make quality healthcare accessible to everyone",
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4 group/item">
-                  <span className="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
-                    <span className="text-xs">✓</span>
+                <li key={i} className="flex items-start gap-3 md:gap-4 group/item">
+                  <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                    <span className="text-[10px] md:text-xs">✓</span>
                   </span>
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-sm md:text-base text-gray-700">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-gray-100">
-            <p className="text-gray-600 italic flex items-start gap-3">
-              <span className="text-3xl">💚</span>
+          <div className="mt-6 md:mt-8 pt-6 border-t border-gray-100">
+            <p className="text-gray-500 text-sm md:text-base italic flex items-start gap-3">
+              <span className="text-2xl md:text-3xl">💚</span>
               <span>We want to build a healthier and stronger community through dedicated medical care.</span>
             </p>
           </div>
