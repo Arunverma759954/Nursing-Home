@@ -135,6 +135,142 @@ export default function AboutClientPage() {
           </div>
         </div>
       </section> */}
+      {/* ABOUT STORY SECTION */}
+<section className="py-12 sm:py-20 md:py-24">
+  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-start">
+    <div className="space-y-8">
+      <div>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-tight mb-5">
+          {t("about.storyTitle")} <span className="text-[#9d174d]">{t("about.storyHighlight")}</span>
+        </h2>
+        <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+          {t("about.storyPara")}
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl md:text-2xl font-black text-[#9d174d] mb-5">{t("about.whyChoose")}</h3>
+        <div className="space-y-5">
+          <div className="flex gap-4">
+            <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">🩺</div>
+            <div>
+              <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.doctorLed")}</h4>
+              <p className="text-sm md:text-base text-gray-600">{t("about.doctorLedDesc")}</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">💡</div>
+            <div>
+              <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.techCompassion")}</h4>
+              <p className="text-sm md:text-base text-gray-600">{t("about.techCompassionDesc")}</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">🌱</div>
+            <div>
+              <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.communityImpact")}</h4>
+              <p className="text-sm md:text-base text-gray-600">{t("about.communityImpactDesc")}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-xl md:text-2xl font-black text-[#9d174d] mb-5">{t("about.milestones")}</h3>
+        <ul className="space-y-3 list-disc list-inside text-base md:text-lg text-gray-700 font-medium">
+          <li>{t("about.milestone1")}</li>
+          <li>{t("about.milestone2")}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
+      <Image
+        src="/raj/cabin3.jpg"
+        alt="Hospital Interior"
+        fill
+        className="object-cover"
+      />
+    </div>
+  </div>
+</section>
+
+{/* MISSION & VISION SECTION */}
+<section className="py-12 sm:py-20 bg-gray-50">
+  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
+    <div className="relative h-[350px] sm:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl order-2 md:order-1">
+      <Image
+        src="/medic-563423_1280.jpg"
+        alt="Doctor with Child"
+        fill
+        className="object-cover"
+      />
+    </div>
+    
+    <div className="space-y-8 sm:space-y-10 order-1 md:order-2">
+      {/* Mission */}
+      <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-3xl">🎯</span>
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900">
+            Our Mission
+          </h3>
+        </div>
+        <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+          Our mission is to provide quality and affordable healthcare in Hapur with care and honesty.
+        </p>
+        <p className="text-base md:text-lg font-bold text-[#9d174d] mb-3">We are committed to:</p>
+        <ul className="space-y-3 mb-4">
+          {[
+            "Providing 24/7 emergency and medical services",
+            "Offering safe pregnancy care and women's health treatment",
+            "Delivering advanced laparoscopic surgery and diagnostics",
+            "Ensuring proper consultation and personalized patient care",
+            "Using modern medical equipment for accurate treatment",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3 text-gray-700">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
+              <span className="text-sm md:text-base">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="text-sm md:text-base text-gray-600 italic border-t border-gray-100 pt-4">
+          Our goal is to treat every patient with compassion, respect, and professionalism.
+        </p>
+      </div>
+
+      {/* Vision */}
+      <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-3xl">👁️</span>
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900">
+            Our Vision
+          </h3>
+        </div>
+        <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+          Our vision is to become a trusted multi-specialty hospital in Hapur and nearby areas.
+        </p>
+        <p className="text-base md:text-lg font-bold text-[#9d174d] mb-3">We aim to:</p>
+        <ul className="space-y-3 mb-4">
+          {[
+            "Provide reliable and advanced medical treatment",
+            "Support families with complete healthcare solutions",
+            "Maintain high standards of safety and hygiene",
+            "Make quality healthcare accessible to everyone",
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3 text-gray-700">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
+              <span className="text-sm md:text-base">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="text-sm md:text-base text-gray-600 italic border-t border-gray-100 pt-4">
+          We want to build a healthier and stronger community through dedicated medical care.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* SERVICES TABS SECTION */}
 <section id="services-tabs" className="py-10 sm:py-14 md:py-16 bg-gray-50">
   <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
