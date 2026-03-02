@@ -138,7 +138,7 @@ export default function AboutClientPage() {
 
 
 {/* MISSION & VISION SECTION - REDESIGNED */}
-<section className="py-20 sm:py-28 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+<section className="py-10 sm:py-14 md:py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
   {/* Decorative elements */}
   <div className="absolute top-0 left-0 w-full h-full">
     <div className="absolute top-20 right-20 w-72 h-72 bg-[#9d174d]/5 rounded-full blur-[100px]" />
