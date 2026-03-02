@@ -135,139 +135,280 @@ export default function AboutClientPage() {
           </div>
         </div>
       </section> */}
-      {/* ABOUT STORY SECTION */}
-<section className="py-12 sm:py-20 md:py-24">
-  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-start">
-    <div className="space-y-8">
-      <div>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-tight mb-5">
-          {t("about.storyTitle")} <span className="text-[#9d174d]">{t("about.storyHighlight")}</span>
-        </h2>
-        <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+      {/* ABOUT STORY SECTION - REDESIGNED */}
+<section className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden">
+  {/* Background decorative elements */}
+  <div className="absolute top-0 right-0 w-96 h-96 bg-[#9d174d]/5 rounded-full blur-[120px] -z-10" />
+  <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px] -z-10" />
+  
+  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
+      {/* Left Content - Text */}
+      <div className="space-y-10">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full">
+          <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+          <span className="text-[#9d174d] font-black tracking-widest uppercase text-xs">
+            OUR STORY
+          </span>
+        </div>
+
+        {/* Title */}
+        <div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+            {t("about.storyTitle")}{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">
+              {t("about.storyHighlight")}
+            </span>
+          </h2>
+          <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] rounded-full mt-6" />
+        </div>
+
+        {/* Description */}
+        <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
           {t("about.storyPara")}
         </p>
-      </div>
 
-      <div>
-        <h3 className="text-xl md:text-2xl font-black text-[#9d174d] mb-5">{t("about.whyChoose")}</h3>
-        <div className="space-y-5">
-          <div className="flex gap-4">
-            <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">🩺</div>
-            <div>
-              <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.doctorLed")}</h4>
-              <p className="text-sm md:text-base text-gray-600">{t("about.doctorLedDesc")}</p>
+        {/* Why Choose Us - Cards Grid */}
+        <div>
+          <h3 className="text-2xl font-black text-gray-900 mb-8 flex items-center gap-3">
+            <span className="w-1 h-8 bg-[#9d174d] rounded-full" />
+            {t("about.whyChoose")}
+          </h3>
+          
+          <div className="grid sm:grid-cols-2 gap-6">
+            {/* Doctor Led Card */}
+            <div className="group bg-white p-6 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#9d174d] to-[#f43f5e] rounded-xl flex items-center justify-center text-2xl text-white mb-4 group-hover:scale-110 transition-transform">
+                🩺
+              </div>
+              <h4 className="text-lg font-black text-gray-900 mb-2">{t("about.doctorLed")}</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">{t("about.doctorLedDesc")}</p>
             </div>
-          </div>
-          <div className="flex gap-4">
-            <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">💡</div>
-            <div>
-              <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.techCompassion")}</h4>
-              <p className="text-sm md:text-base text-gray-600">{t("about.techCompassionDesc")}</p>
+
+            {/* Tech & Compassion Card */}
+            <div className="group bg-white p-6 rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-2xl text-white mb-4 group-hover:scale-110 transition-transform">
+                💡
+              </div>
+              <h4 className="text-lg font-black text-gray-900 mb-2">{t("about.techCompassion")}</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">{t("about.techCompassionDesc")}</p>
             </div>
-          </div>
-          <div className="flex gap-4">
-            <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">🌱</div>
-            <div>
-              <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.communityImpact")}</h4>
-              <p className="text-sm md:text-base text-gray-600">{t("about.communityImpactDesc")}</p>
+
+            {/* Community Impact Card - Full width on desktop */}
+            <div className="sm:col-span-2 group bg-gradient-to-br from-[#9d174d]/5 to-pink-50 p-6 rounded-2xl border border-[#9d174d]/20 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start gap-5">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#9d174d] to-[#f43f5e] rounded-xl flex items-center justify-center text-2xl text-white shrink-0 group-hover:scale-110 transition-transform">
+                  🌱
+                </div>
+                <div>
+                  <h4 className="text-lg font-black text-gray-900 mb-2">{t("about.communityImpact")}</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">{t("about.communityImpactDesc")}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Milestones */}
+        <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+          <h3 className="text-xl font-black text-gray-900 mb-6 flex items-center gap-2">
+            <span className="text-2xl">🏆</span>
+            {t("about.milestones")}
+          </h3>
+          <ul className="space-y-4">
+            <li className="flex items-center gap-4">
+              <span className="w-2 h-2 rounded-full bg-[#9d174d]" />
+              <span className="text-gray-700 font-medium">{t("about.milestone1")}</span>
+            </li>
+            <li className="flex items-center gap-4">
+              <span className="w-2 h-2 rounded-full bg-[#9d174d]" />
+              <span className="text-gray-700 font-medium">{t("about.milestone2")}</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div>
-        <h3 className="text-xl md:text-2xl font-black text-[#9d174d] mb-5">{t("about.milestones")}</h3>
-        <ul className="space-y-3 list-disc list-inside text-base md:text-lg text-gray-700 font-medium">
-          <li>{t("about.milestone1")}</li>
-          <li>{t("about.milestone2")}</li>
-        </ul>
-      </div>
-    </div>
+      {/* Right Content - Image with Stats Overlay */}
+      <div className="relative">
+        {/* Main Image */}
+        <div className="relative h-[500px] lg:h-[650px] rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
+          <Image
+            src="/raj/cabin3.jpg"
+            alt="Hospital Interior"
+            fill
+            className="object-cover hover:scale-110 transition-transform duration-700"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        </div>
 
-    <div className="relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
-      <Image
-        src="/raj/cabin3.jpg"
-        alt="Hospital Interior"
-        fill
-        className="object-cover"
-      />
+        {/* Stats Card - Overlay */}
+        <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 max-w-[250px]">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 bg-[#9d174d]/10 rounded-xl flex items-center justify-center">
+              <span className="text-2xl">📊</span>
+            </div>
+            <div>
+              <p className="text-3xl font-black text-[#9d174d]">35+</p>
+              <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Years of Excellence</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Experience Badge */}
+        <div className="absolute top-8 right-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white">
+          <p className="text-sm font-bold text-gray-900">Trusted by</p>
+          <p className="text-2xl font-black text-[#9d174d]">50,000+</p>
+          <p className="text-xs text-gray-500">Patients</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-{/* MISSION & VISION SECTION */}
-<section className="py-12 sm:py-20 bg-gray-50">
-  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
-    <div className="relative h-[350px] sm:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl order-2 md:order-1">
-      <Image
-        src="/medic-563423_1280.jpg"
-        alt="Doctor with Child"
-        fill
-        className="object-cover"
-      />
+{/* MISSION & VISION SECTION - REDESIGNED */}
+<section className="py-20 sm:py-28 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+  {/* Decorative elements */}
+  <div className="absolute top-0 left-0 w-full h-full">
+    <div className="absolute top-20 right-20 w-72 h-72 bg-[#9d174d]/5 rounded-full blur-[100px]" />
+    <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-500/5 rounded-full blur-[100px]" />
+  </div>
+
+  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 relative z-10">
+    {/* Section Header */}
+    <div className="text-center mb-16">
+      <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
+        <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+        <span className="text-[#9d174d] font-black tracking-widest uppercase text-xs">
+          OUR PURPOSE
+        </span>
+      </div>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900">
+        Driving <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">Healthcare Excellence</span>
+      </h2>
+      <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] rounded-full mx-auto mt-6" />
     </div>
-    
-    <div className="space-y-8 sm:space-y-10 order-1 md:order-2">
-      {/* Mission */}
-      <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="text-3xl">🎯</span>
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900">
-            Our Mission
-          </h3>
+
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
+      {/* Mission Card */}
+      <div className="group bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+        {/* Card Header with Icon */}
+        <div className="relative h-48 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] p-8 flex items-end">
+          <div className="absolute top-8 right-8 text-8xl opacity-20">🎯</div>
+          <div>
+            <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4">
+              <span className="text-4xl">🎯</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-black text-white">Our Mission</h3>
+          </div>
         </div>
-        <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-          Our mission is to provide quality and affordable healthcare in Hapur with care and honesty.
-        </p>
-        <p className="text-base md:text-lg font-bold text-[#9d174d] mb-3">We are committed to:</p>
-        <ul className="space-y-3 mb-4">
-          {[
-            "Providing 24/7 emergency and medical services",
-            "Offering safe pregnancy care and women's health treatment",
-            "Delivering advanced laparoscopic surgery and diagnostics",
-            "Ensuring proper consultation and personalized patient care",
-            "Using modern medical equipment for accurate treatment",
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-3 text-gray-700">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-              <span className="text-sm md:text-base">{item}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="text-sm md:text-base text-gray-600 italic border-t border-gray-100 pt-4">
-          Our goal is to treat every patient with compassion, respect, and professionalism.
-        </p>
+
+        {/* Card Content */}
+        <div className="p-8 md:p-10">
+          <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
+            Our mission is to provide quality and affordable healthcare in Hapur with care and honesty.
+          </p>
+
+          <div className="space-y-6">
+            <p className="text-xl font-bold text-[#9d174d] flex items-center gap-2">
+              <span className="w-1 h-6 bg-[#9d174d] rounded-full" />
+              We are committed to:
+            </p>
+            
+            <ul className="space-y-4">
+              {[
+                "Providing 24/7 emergency and medical services",
+                "Offering safe pregnancy care and women's health treatment",
+                "Delivering advanced laparoscopic surgery and diagnostics",
+                "Ensuring proper consultation and personalized patient care",
+                "Using modern medical equipment for accurate treatment",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-4 group/item">
+                  <span className="w-6 h-6 rounded-full bg-[#9d174d]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#9d174d] group-hover/item:text-white transition-colors">
+                    <span className="text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-gray-100">
+            <p className="text-gray-600 italic flex items-start gap-3">
+              <span className="text-3xl">💭</span>
+              <span>Our goal is to treat every patient with compassion, respect, and professionalism.</span>
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Vision */}
-      <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="text-3xl">👁️</span>
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900">
-            Our Vision
-          </h3>
+      {/* Vision Card */}
+      <div className="group bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 overflow-hidden hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+        {/* Card Header with Icon */}
+        <div className="relative h-48 bg-gradient-to-r from-blue-600 to-blue-400 p-8 flex items-end">
+          <div className="absolute top-8 right-8 text-8xl opacity-20">👁️</div>
+          <div>
+            <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4">
+              <span className="text-4xl">👁️</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-black text-white">Our Vision</h3>
+          </div>
         </div>
-        <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
-          Our vision is to become a trusted multi-specialty hospital in Hapur and nearby areas.
-        </p>
-        <p className="text-base md:text-lg font-bold text-[#9d174d] mb-3">We aim to:</p>
-        <ul className="space-y-3 mb-4">
-          {[
-            "Provide reliable and advanced medical treatment",
-            "Support families with complete healthcare solutions",
-            "Maintain high standards of safety and hygiene",
-            "Make quality healthcare accessible to everyone",
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-3 text-gray-700">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-              <span className="text-sm md:text-base">{item}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="text-sm md:text-base text-gray-600 italic border-t border-gray-100 pt-4">
-          We want to build a healthier and stronger community through dedicated medical care.
-        </p>
+
+        {/* Card Content */}
+        <div className="p-8 md:p-10">
+          <p className="text-lg text-gray-700 leading-relaxed mb-8 font-medium">
+            Our vision is to become a trusted multi-specialty hospital in Hapur and nearby areas.
+          </p>
+
+          <div className="space-y-6">
+            <p className="text-xl font-bold text-blue-600 flex items-center gap-2">
+              <span className="w-1 h-6 bg-blue-600 rounded-full" />
+              We aim to:
+            </p>
+            
+            <ul className="space-y-4">
+              {[
+                "Provide reliable and advanced medical treatment",
+                "Support families with complete healthcare solutions",
+                "Maintain high standards of safety and hygiene",
+                "Make quality healthcare accessible to everyone",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-4 group/item">
+                  <span className="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                    <span className="text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-gray-100">
+            <p className="text-gray-600 italic flex items-start gap-3">
+              <span className="text-3xl">💚</span>
+              <span>We want to build a healthier and stronger community through dedicated medical care.</span>
+            </p>
+          </div>
+        </div>
       </div>
+    </div>
+
+    {/* Bottom Stats Row */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+      {[
+        { number: "35+", label: "Years of Service", icon: "⭐" },
+        { number: "50K+", label: "Happy Patients", icon: "❤️" },
+        { number: "24/7", label: "Emergency Care", icon: "🚑" },
+        { number: "10+", label: "Specialists", icon: "👨‍⚕️" },
+      ].map((stat, i) => (
+        <div key={i} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition-all">
+          <span className="text-3xl mb-2 block">{stat.icon}</span>
+          <p className="text-2xl font-black text-[#9d174d]">{stat.number}</p>
+          <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">{stat.label}</p>
+        </div>
+      ))}
     </div>
   </div>
 </section>
