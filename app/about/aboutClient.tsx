@@ -155,7 +155,10 @@ export default function AboutClientPage() {
         </span>
       </div>
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900">
-        Driving <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">Healthcare Excellence</span>
+        Driving{" "}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] to-[#f43f5e]">
+          Healthcare Excellence
+        </span>
       </h2>
       <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] rounded-full mx-auto mt-6" />
     </div>
@@ -264,7 +267,6 @@ export default function AboutClientPage() {
         </div>
       </div>
     </div>
-
   </div>
 </section>
       {/* SERVICES TABS SECTION */}
