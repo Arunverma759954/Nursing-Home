@@ -17,19 +17,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-size: 17px;
+    font-size: 16px;
     -webkit-text-size-adjust: 100%;
   }
 
   @media (min-width: 768px) {
     html {
-      font-size: 17.5px;
+      font-size: 17px;
     }
   }
 
   @media (min-width: 1024px) {
     html {
-      font-size: 18px;
+      font-size: 17.5px;
     }
   }
 
@@ -91,14 +91,14 @@
 }
 
 .section-padding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -168,4 +168,11 @@
 .animate-page-enter {
   animation: pageEnter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   will-change: transform, opacity, filter;
+}
+
+/* Mobile Footer Bar Spacing - Add bottom padding so content isn't hidden */
+@media (max-width: 1279px) {
+  body {
+    padding-bottom: 64px;
+  }
 }

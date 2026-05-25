@@ -50,11 +50,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden pt-[100px] sm:pt-[110px] md:pt-[130px]">
+    <div className="min-h-screen bg-white overflow-x-hidden pt-[110px] sm:pt-[120px] md:pt-[140px]">
       {/* ═══════════════════════════════════════════════════════════════════════════
           HERO SECTION
       ═══════════════════════════════════════════════════════════════════════════ */}
-      <section id="home" className="relative h-auto min-h-[340px] sm:min-h-[380px] md:min-h-[420px] lg:h-[520px] flex items-center overflow-hidden py-8 sm:py-12 md:py-0 bg-white pb-12 sm:pb-16 md:pb-20">
+      <section id="home" className="relative h-auto min-h-[340px] sm:min-h-[380px] md:min-h-[420px] lg:h-[480px] flex items-center overflow-hidden py-6 sm:py-10 md:py-0 bg-white pb-8 sm:pb-12 md:pb-16">
         <Image src="/Banner_1c.webp" alt="Raj Nursing Home Banner" fill className="object-cover z-0 opacity-90" priority sizes="100vw" />
 
         {/* Gradients */}
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
 
             {/* Main Heading - tighter line gap */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-[1.1] tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-[1.1] tracking-tight">
               {t("home.hero.title")} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] via-[#f43f5e] to-[#9d174d]">{t("home.hero.titleHighlight")}</span>
             </h1>
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* QUICK SERVICES */}
-      <section className="py-6 sm:py-10 bg-[#9d174d]">
+      <section className="py-4 md:py-8 bg-[#9d174d]">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-8">
             {[
@@ -133,7 +133,7 @@ export default function Home() {
       </section>
 
        {/* TRUSTED PARTNER - clean two-column */}
-      <section className="py-14 sm:py-16 md:py-20 bg-white overflow-hidden">
+      <section className="py-8 sm:py-12 md:py-14 bg-white overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
           <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-12 items-center">
 <div className="w-full lg:w-[58%] order-1 lg:order-2 lg:pl-2">
@@ -181,7 +181,7 @@ export default function Home() {
       </section>
 
       {/* NEW SECTION 1: OUR MEDICAL SERVICES (Image Left, Text Right) */}
-      <section className="pb-10 sm:pb-12 md:pb-16 bg-white overflow-hidden">
+      <section className="pb-8 md:pb-12 bg-white overflow-hidden">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16">
             {/* Image Side */}
@@ -224,7 +224,7 @@ export default function Home() {
       </section >
 
       {/* NEW SECTION 2: HEALTH SERVICES FOR EVERYONE (Text Left, Image Right) */}
-      <section className="py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
+      <section className="py-8 md:py-12 bg-gray-50 overflow-hidden">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-10 md:gap-16">
             {/* Text Side */}
@@ -271,7 +271,7 @@ export default function Home() {
         </div>
       </section >
       {/* ABOUT SECTION */}
-      <section id="about" className="pb-10 sm:pb-12 md:pb-16 bg-gray-50">
+      <section id="about" className="pb-8 md:pb-12 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
             <div className="grid grid-cols-2 gap-3 md:gap-6">
@@ -325,7 +325,7 @@ export default function Home() {
       </section >
 
       {/* SERVICES */}
-      <section id="services" className="pt-10 sm:pt-12 md:pt-16 bg-white">
+      <section id="services" className="pt-8 md:pt-12 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12 md:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
@@ -369,26 +369,62 @@ export default function Home() {
       </section >
 
       {/* OUR FACILITY - 9 items grid (screenshot 2) */}
-      <section id="facility" className="pb-10 sm:pb-12 md:pb-16 bg-white">
+      <section id="facility" className="pb-8 md:pb-12 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-3">{t("home.ourFacility.label")}</h3>
           {/* <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" /> */}
         </div>
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
-            { title: t("home.ourFacility.f1Title"), desc: t("home.ourFacility.f1Desc"), icon: "247" },
-            { title: t("home.ourFacility.f2Title"), desc: t("home.ourFacility.f2Desc"), icon: "🩺" },
-            { title: t("home.ourFacility.f3Title"), desc: t("home.ourFacility.f3Desc"), icon: "❤️" },
-            { title: t("home.ourFacility.f4Title"), desc: t("home.ourFacility.f4Desc"), icon: "👩" },
-            { title: t("home.ourFacility.f5Title"), desc: t("home.ourFacility.f5Desc"), icon: "🫁" },
-            { title: t("home.ourFacility.f6Title"), desc: t("home.ourFacility.f6Desc"), icon: "📡" },
-            { title: t("home.ourFacility.f7Title"), desc: t("home.ourFacility.f7Desc"), icon: "💓" },
-            { title: t("home.ourFacility.f8Title"), desc: t("home.ourFacility.f8Desc"), icon: "💊" },
-            { title: t("home.ourFacility.f9Title"), desc: t("home.ourFacility.f9Desc"), icon: "🩻" },
+            {
+              title: t("home.ourFacility.f1Title"), desc: t("home.ourFacility.f1Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 11.9 19.79 19.79 0 0 1 1.06 3.27 2 2 0 0 1 3.04 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>,
+              label: "24/7"
+            },
+            {
+              title: t("home.ourFacility.f2Title"), desc: t("home.ourFacility.f2Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>,
+              label: ""
+            },
+            {
+              title: t("home.ourFacility.f3Title"), desc: t("home.ourFacility.f3Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>,
+              label: ""
+            },
+            {
+              title: t("home.ourFacility.f4Title"), desc: t("home.ourFacility.f4Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M12 14v6"/><path d="M9 18h6"/></svg>,
+              label: ""
+            },
+            {
+              title: t("home.ourFacility.f5Title"), desc: t("home.ourFacility.f5Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.5c1-2 3-3.5 5-3.5a5 5 0 0 1 5 5c0 5.5-10 12-10 12S2 13.5 2 8a5 5 0 0 1 5-5c2 0 4 1.5 5 3.5Z"/><path d="M12 6.5V18"/></svg>,
+              label: ""
+            },
+            {
+              title: t("home.ourFacility.f6Title"), desc: t("home.ourFacility.f6Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="2"/><path d="M6.3 6.3a8 8 0 0 0 0 11.31"/><path d="M17.7 6.3a8 8 0 0 1 0 11.31"/><path d="M3.5 3.5a13.5 13.5 0 0 0 0 19.1"/><path d="M20.5 3.5a13.5 13.5 0 0 1 0 19.1"/></svg>,
+              label: ""
+            },
+            {
+              title: t("home.ourFacility.f7Title"), desc: t("home.ourFacility.f7Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>,
+              label: ""
+            },
+            {
+              title: t("home.ourFacility.f8Title"), desc: t("home.ourFacility.f8Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 3h6l1 4H8L9 3Z"/><path d="M3 7h18l-2 13H5L3 7Z"/><path d="M12 12v4"/><path d="M10 14h4"/></svg>,
+              label: ""
+            },
+            {
+              title: t("home.ourFacility.f9Title"), desc: t("home.ourFacility.f9Desc"),
+              icon: <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>,
+              label: ""
+            },
           ].map((item, i) => (
             <div key={i} className="flex gap-4 md:gap-5 p-5 md:p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-[#9d174d]/30 hover:shadow-lg transition-all text-left">
-              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#9d174d] text-white flex items-center justify-center font-black text-sm md:text-base shrink-0">
-                {item.icon === "247" ? "24/7" : item.icon}
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#9d174d] text-white flex items-center justify-center shrink-0">
+                {item.label ? <span className="font-black text-sm md:text-base">{item.label}</span> : item.icon}
               </div>
               <div>
                 <h3 className="font-black text-gray-900 text-base md:text-lg mb-1">{item.title}</h3>
@@ -449,7 +485,7 @@ export default function Home() {
 
       {/* DOCTORS */}
       {/* DOCTORS SECTION - Responsive Cards */}
-      <section id="doctors" className="py-10 sm:py-12 md:py-16 bg-gray-50 overflow-hidden">
+      <section id="doctors" className="py-8 md:py-12 bg-gray-50 overflow-hidden">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-10 md:mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
@@ -612,7 +648,7 @@ export default function Home() {
       </section>
 
       {/* DEPARTMENT SECTION - Premium Modern Design */}
-      <section className="py-10 sm:py-12 md:py-16 bg-gradient-to-br from-gray-50 via-white to-red-50/30 relative overflow-hidden">
+      <section className="py-8 md:py-12 bg-gradient-to-br from-gray-50 via-white to-red-50/30 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-red-100 rounded-full blur-[120px] opacity-30" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#9d174d]/10 rounded-full blur-[120px] opacity-40" />
@@ -760,7 +796,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS SECTION - Premium Redesign */}
-      <section id="testimonials" className="py-10 sm:py-14 md:py-16 bg-[#0f172a] relative overflow-hidden text-white">
+      <section id="testimonials" className="py-8 md:py-12 bg-[#0f172a] relative overflow-hidden text-white">
         {/* Abstract Background Shapes */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#9d174d] rounded-full blur-[120px]"></div>
@@ -901,7 +937,7 @@ export default function Home() {
       </section> */}
 
       {/* FACILITIES (Secondary) */}
-      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
+      <section className="py-8 md:py-12 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-10 md:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
@@ -934,7 +970,7 @@ export default function Home() {
       </section>
 
       {/* MEDIA GALLERY - 2x3 grid (screenshot 3) */}
-      <section className="pb-10 sm:pb-14 md:pb-16 bg-gray-50">
+      <section className="pb-8 md:pb-12 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
           <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{t("home.mediaGallery.label")}</h3>
           {/* <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" /> */}
@@ -956,7 +992,7 @@ export default function Home() {
       </section>
 
       {/* NEWS AND HEALTH TIPS - 3 blog cards (screenshot 3) */}
-      <section className="py-10 sm:py-14 md:py-16 bg-white">
+      <section className="py-8 md:py-12 bg-white">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
           <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{t("home.newsHealthTips.label")}</h3>
           {/* <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full mt-3" /> */}
@@ -986,7 +1022,7 @@ export default function Home() {
       </section>
 
       {/* FAQ - Accordion */}
-      <section className="py-10 sm:py-14 md:py-16 bg-gray-50">
+      <section className="py-8 md:py-12 bg-gray-50">
         <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 mb-2">
             {/* <span className="w-10 h-10 rounded-lg bg-[#9d174d]/10 flex items-center justify-center text-[#9d174d] shrink-0">

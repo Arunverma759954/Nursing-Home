@@ -51,6 +51,8 @@ export default function AppointmentModal() {
   const [date, setDate] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
 
   useEffect(() => {
     if (isOpen) document.body.style.overflow = "hidden";
@@ -60,8 +62,53 @@ export default function AppointmentModal() {
 
   if (!isOpen) return null;
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "appointment",
+          name,
+          email,
+          phone,
+          city,
+          date,
+          service,
+          message,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: 'Appointment request sent successfully!' });
+        setName("");
+        setEmail("");
+        setPhone("");
+        setCity("");
+        setDate("");
+        setService("");
+        setMessage("");
+        // Close modal after delay on success
+        setTimeout(() => {
+          closeAppointment();
+          setSubmitStatus(null);
+        }, 2500);
+      } else {
+        const errorData = await response.json();
+        setSubmitStatus({ 
+          type: 'error', 
+          message: errorData.details || 'Failed to send request. Please try again.' 
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({ type: 'error', message: 'Connection issue. Please check your internet and try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -81,62 +128,68 @@ export default function AppointmentModal() {
           <XIcon />
         </button>
 
-        <div className="bg-gradient-to-r from-[#9d174d] via-[#831843] to-gray-900 text-white px-6 py-8 sm:py-10 rounded-t-2xl text-center">
-          <h2 className="text-2xl sm:text-3xl font-black tracking-tight">
-            {t("appointment.title")}
-          </h2>
-          <p className="mt-2 text-sm sm:text-base text-white/90 max-w-lg mx-auto">
-            {t("appointment.subtitle")}
-          </p>
+        <div className="bg-gradient-to-br from-[#9d174d] via-[#831843] to-[#4c0519] text-white px-6 py-4 sm:py-6 rounded-t-2xl text-center relative overflow-hidden">
+          {/* Subtle noise/texture overlay */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+          
+          <div className="relative z-10 flex items-center justify-center gap-4">
+            <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+              <CalendarIcon />
+            </div>
+            <div className="text-left">
+              <h2 className="text-xl sm:text-2xl font-black tracking-tight leading-none">
+                {t("appointment.title")}
+              </h2>
+              <p className="text-[10px] sm:text-xs text-white/70 mt-1 font-medium">
+                {t("appointment.subtitle")}
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="p-6 sm:p-8">
-          <h3 className="text-lg font-bold text-[#9d174d] mb-6">
-            {t("appointment.formTitle")}
-          </h3>
-
-          <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
+        <div className="p-4">
+          <form onSubmit={handleSubmit} className="grid gap-2.5 sm:grid-cols-2">
             <div>
-              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+              <label className="block text-xs font-semibold text-gray-600 mb-1">
                 {t("appointment.fullName")}
               </label>
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
+                className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-2.5 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+              <label className="block text-xs font-semibold text-gray-600 mb-1">
                 {t("appointment.email")}
               </label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
+                className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-2.5 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+              <label className="block text-xs font-semibold text-gray-600 mb-1">
                 {t("appointment.phone")}
               </label>
               <input
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
+                className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-2.5 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+              <label className="block text-xs font-semibold text-gray-600 mb-1">
                 {t("appointment.city")}
               </label>
               <input
@@ -144,34 +197,31 @@ export default function AppointmentModal() {
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 placeholder="e.g. Hapur, Ghaziabad"
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
+                className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-2.5 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
               />
             </div>
 
-            <div className="relative">
-              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+            <div>
+              <label className="block text-xs font-semibold text-gray-600 mb-1">
                 {t("appointment.date")}
               </label>
               <input
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 pr-10 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
+                className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-2.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
               />
-              <span className="absolute right-3 bottom-3 text-gray-400 pointer-events-none">
-                <CalendarIcon />
-              </span>
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+              <label className="block text-xs font-semibold text-gray-600 mb-1">
                 {t("appointment.selectService")}
               </label>
               <div className="relative">
                 <select
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="w-full appearance-none rounded-xl border border-gray-200 bg-white px-4 py-3 pr-10 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
+                  className="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-2.5 pr-10 text-sm font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
                 >
                   <option value="">{t("appointment.selectService")}</option>
                   {serviceOptions.map((opt) => (
@@ -187,25 +237,88 @@ export default function AppointmentModal() {
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-xs font-semibold text-gray-600 mb-1.5">
+              <label className="block text-xs font-semibold text-gray-600 mb-1">
                 {t("appointment.additionalMessage")}
               </label>
               <textarea
-                rows={4}
+                rows={2}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Any specific request or note..."
-                className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
+                className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-2 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#9d174d]/30 focus:border-[#9d174d]"
               />
             </div>
 
-            <div className="sm:col-span-2 flex justify-center pt-2">
-              <button
-                type="submit"
-                className="w-full sm:w-auto min-w-[220px] py-4 px-8 rounded-xl bg-gradient-to-r from-[#9d174d] via-[#831843] to-gray-900 text-white font-black text-sm uppercase tracking-wide shadow-lg shadow-red-500/20 hover:shadow-red-500/30 transition-all"
-              >
-                {t("appointment.bookButton")}
-              </button>
+            <div className="sm:col-span-2 flex flex-col gap-4 pt-2">
+              {submitStatus && (
+                <div 
+                  className={`flex flex-col gap-3 p-4 rounded-xl animate-in fade-in zoom-in-95 duration-500 ${
+                    submitStatus.type === 'success' 
+                    ? 'bg-emerald-50/50 border border-emerald-100 ring-1 ring-emerald-500/20 shadow-sm' 
+                    : 'bg-rose-50/50 border border-rose-100 ring-1 ring-rose-500/20 shadow-sm'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 shadow-sm ${
+                      submitStatus.type === 'success' ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'
+                    }`}>
+                      {submitStatus.type === 'success' ? (
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : (
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      )}
+                    </div>
+                    <div>
+                      <h4 className={`text-sm font-black ${submitStatus.type === 'success' ? 'text-emerald-800' : 'text-rose-800'}`}>
+                        {submitStatus.type === 'success' ? 'Appointment Confirmed' : 'Submission Failed'}
+                      </h4>
+                      <p className={`text-[11px] font-medium ${submitStatus.type === 'success' ? 'text-emerald-600/90' : 'text-rose-600/90'}`}>
+                        {submitStatus.message}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`relative group overflow-hidden w-full py-3.5 px-8 rounded-xl text-white font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-3 ${
+                    isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-gradient-to-r from-[#9d174d] via-[#831843] to-gray-900 hover:shadow-lg active:translate-y-0'
+                  }`}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <span>{t("nav.booking") || "Processing..."}</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>{t("appointment.bookButton")}</span>
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="16" 
+                        height="16" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="3" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        className="group-hover:translate-x-1 transition-transform"
+                      >
+                        <path d="m12 5 7 7-7 7"/><path d="M5 12h14"/>
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           </form>
         </div>

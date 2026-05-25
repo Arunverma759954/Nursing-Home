@@ -255,20 +255,23 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 w-full z-50">
         {/* Top Header Bar - equal left/right gap via padding inside max-w container */}
-        <div className="bg-[#9d174d] text-white py-2 border-b border-white/10">
-          <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 py-1 flex flex-nowrap items-center justify-between">
+        <div className="bg-[#9d174d] text-white border-b border-white/10">
+          <div className="max-w-[1420px] mx-auto px-3 sm:px-8 md:px-10 lg:px-12 py-1 flex flex-nowrap items-center justify-between gap-2">
+            {/* Phone - always visible */}
             <a
               href="tel:+916397970802"
-              className="flex items-center gap-2 sm:gap-4 hover:text-red-100 transition-colors group shrink-0 min-h-[44px] min-w-[44px] items-center justify-center sm:justify-start"
+              className="flex items-center gap-1.5 sm:gap-3 hover:text-red-100 transition-colors group shrink-0"
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all shrink-0">
-                <PhoneIcon />
+              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="text-[10px] font-bold opacity-70 uppercase tracking-widest hidden min-[450px]:block">
+                <span className="text-[9px] sm:text-[10px] font-bold opacity-70 uppercase tracking-widest hidden min-[380px]:block">
                   {t("nav.needUrgentCare")}
                 </span>
-                <span className="text-xs sm:text-sm font-black truncate">+91 63979 70802</span>
+                <span className="text-[10px] sm:text-xs font-black whitespace-nowrap">+91 63979 70802</span>
               </div>
             </a>
 
@@ -276,42 +279,36 @@ export default function Navbar() {
               href="mailto:drvipinkumarsharma@gmail.com"
               className="hidden min-[1150px]:flex items-center gap-3 hover:text-red-100 transition-colors group shrink-0"
             >
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all">
+              <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all">
                 <MailIcon />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold opacity-70 uppercase tracking-widest">
-                  {t("nav.sendUsMail")}
-                </span>
-                <span className="text-sm font-black">
-                  drvipinkumarsharma@gmail.com
-                </span>
+                <span className="text-[10px] font-bold opacity-70 uppercase tracking-widest">{t("nav.sendUsMail")}</span>
+                <span className="text-sm font-black">drvipinkumarsharma@gmail.com</span>
               </div>
             </a>
 
             <div className="hidden min-[1300px]:flex items-center gap-3 group shrink-0">
-              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-all">
+              <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
                 <MapPinIcon />
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold opacity-70 uppercase tracking-widest">
-                  {t("nav.ourLocation")}
-                </span>
-                <span className="text-sm font-black italic">
-                  {t("nav.locationAddress")}
-                </span>
+                <span className="text-[10px] font-bold opacity-70 uppercase tracking-widest">{t("nav.ourLocation")}</span>
+                <span className="text-sm font-black italic">{t("nav.locationAddress")}</span>
               </div>
             </div>
-
 
             {/* Book Appointment - top right */}
             <button
               type="button"
               onClick={openAppointment}
-              className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-white text-[#9d174d] hover:bg-red-50 font-black text-[10px] sm:text-xs rounded-lg shadow-lg transition-all hover:-translate-y-0.5 shrink-0 uppercase tracking-wide whitespace-nowrap"
+              className="flex items-center gap-1 sm:gap-2 px-2 py-1 sm:px-4 sm:py-1.5 bg-white text-[#9d174d] hover:bg-red-50 font-black text-[9px] sm:text-[11px] rounded-md sm:rounded-lg shadow transition-all hover:-translate-y-0.5 shrink-0 uppercase tracking-wide whitespace-nowrap"
             >
-              <span>{t("nav.bookAppointment")}</span>
-              <ArrowRightIcon />
+              <span className="hidden min-[360px]:inline">{t("nav.bookAppointment")}</span>
+              <span className="min-[360px]:hidden">Book</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+              </svg>
             </button>
           </div>
         </div>
@@ -319,13 +316,13 @@ export default function Navbar() {
         {/* Main Navbar */}
         <div
           className={`w-full transition-all duration-500 bg-white border-b border-gray-100 ${isScrolled
-            ? "shadow-[0_10px_30px_rgba(157,23,77,0.1)] py-2"
-            : "py-4"
+            ? "shadow-[0_10px_30px_rgba(157,23,77,0.1)] py-1"
+            : "py-1.5"
             }`}
         >
           <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 flex items-center justify-between gap-3 lg:gap-6 flex-nowrap">
             <Link href="/" className="flex items-center gap-1.5 sm:gap-2 group shrink-0 min-w-0 pr-1 sm:pr-2 lg:pr-3">
-              <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 shrink-0 transition-transform group-hover:rotate-[360deg] duration-1000">
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-14 lg:h-14 shrink-0 transition-transform group-hover:rotate-[360deg] duration-1000">
                 <Image
                   src="/RNH logo.png"
                   alt="RNH Logo"
@@ -334,11 +331,11 @@ export default function Navbar() {
                   priority
                 />
               </div>
-              <div className="flex flex-col min-w-0 max-w-[120px] min-[400px]:max-w-[150px] sm:max-w-[200px]">
-                <p className="text-[10px] sm:text-sm md:text-base lg:text-lg font-black text-[#9d174d] tracking-tight leading-none uppercase truncate">
+              <div className="flex flex-col min-w-0 max-w-[120px] min-[360px]:max-w-[150px] sm:max-w-[220px] lg:max-w-[280px]">
+                <p className="text-[10px] min-[360px]:text-[11px] sm:text-sm md:text-base lg:text-lg font-black text-[#9d174d] tracking-tight leading-tight uppercase">
                   {t("nav.rajNursingHome")}
                 </p>
-                <p className="text-[5px] sm:text-[7px] md:text-[8px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 leading-tight hidden min-[400px]:block">
+                <p className="text-[6px] sm:text-[7px] md:text-[8px] font-bold text-gray-400 uppercase tracking-widest mt-0.5 leading-tight hidden min-[360px]:block">
                   {t("nav.excellenceSince")}
                 </p>
               </div>
@@ -537,6 +534,45 @@ export default function Navbar() {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Mobile Footer Bar - Only visible on mobile/tablet */}
+      <div className="xl:hidden fixed bottom-0 left-0 right-0 z-[90] bg-[#0f172a] border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
+        <div className="flex items-center justify-between px-4 py-2 max-w-screen-xl mx-auto">
+          {/* Contact Now */}
+          <button
+            type="button"
+            onClick={openAppointment}
+            className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#9d174d] to-[#be185d] text-white font-black text-sm rounded-full shadow-lg shadow-red-500/30 transition-all active:scale-95 whitespace-nowrap"
+          >
+            <span className="text-[#7df9c8] font-black tracking-wide">Contact Now</span>
+          </button>
+
+          {/* WhatsApp Button */}
+          <a
+            href="https://wa.me/916397970802"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 hover:bg-green-500/20 border border-white/10 transition-all active:scale-95"
+            aria-label="WhatsApp"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#25D366"/>
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.413A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.963 7.963 0 01-4.163-1.17l-.298-.178-3.082.876.878-3.143-.194-.314A7.951 7.951 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" fill="#25D366"/>
+            </svg>
+          </a>
+
+          {/* Phone Call Button */}
+          <a
+            href="tel:+916397970802"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 hover:bg-red-500/20 border border-white/10 transition-all active:scale-95"
+            aria-label="Call Us"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f87171" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 11.9 19.79 19.79 0 0 1 1.06 3.27 2 2 0 0 1 3.04 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </a>
         </div>
       </div>
     </>

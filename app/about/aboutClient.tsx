@@ -50,11 +50,18 @@ export default function AboutClientPage() {
         </div>
       </section>
 
-      {/* <section className="py-12 sm:py-20 md:py-24">
-        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-start">
-          <div className="space-y-8">
+      {/* STORY / WHY CHOOSE US / MILESTONES SECTION */}
+      <section className="py-10 sm:py-14 md:py-16 bg-white">
+        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-start">
+          {/* Left: Story + Why Choose + Milestones */}
+          <div className="space-y-10">
+            {/* Story */}
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-tight mb-5">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+                <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">Our Story</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-tight mb-4">
                 {t("about.storyTitle")} <span className="text-[#9d174d]">{t("about.storyHighlight")}</span>
               </h2>
               <p className="text-gray-600 leading-relaxed text-base md:text-lg">
@@ -62,451 +69,191 @@ export default function AboutClientPage() {
               </p>
             </div>
 
+            {/* Why Choose Us */}
             <div>
-              <h3 className="text-xl md:text-2xl font-black text-[#9d174d] mb-5">{t("about.whyChoose")}</h3>
+              <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-5">{t("about.whyChoose")}</h3>
               <div className="space-y-5">
-                <div className="flex gap-4">
-                  <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">🩺</div>
-                  <div>
-                    <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.doctorLed")}</h4>
-                    <p className="text-sm md:text-base text-gray-600">{t("about.doctorLedDesc")}</p>
+                {[
+                  { icon: "🩺", title: t("about.doctorLed"), desc: t("about.doctorLedDesc") },
+                  { icon: "💡", title: t("about.techCompassion"), desc: t("about.techCompassionDesc") },
+                  { icon: "🌱", title: t("about.communityImpact"), desc: t("about.communityImpactDesc") },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                    <div className="shrink-0 w-10 h-10 bg-white rounded-xl flex items-center justify-center text-xl shadow-sm border border-gray-100">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-base font-black text-gray-900">{item.title}</h4>
+                      <p className="text-sm text-gray-600 mt-0.5">{item.desc}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">💡</div>
-                  <div>
-                    <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.techCompassion")}</h4>
-                    <p className="text-sm md:text-base text-gray-600">{t("about.techCompassionDesc")}</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="shrink-0 w-7 h-7 mt-1 text-[#9d174d] text-xl">🌱</div>
-                  <div>
-                    <h4 className="text-base md:text-lg font-black text-gray-900">{t("about.communityImpact")}</h4>
-                    <p className="text-sm md:text-base text-gray-600">{t("about.communityImpactDesc")}</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
+            {/* Milestones */}
             <div>
-              <h3 className="text-xl md:text-2xl font-black text-[#9d174d] mb-5">{t("about.milestones")}</h3>
-              <ul className="space-y-3 list-disc list-inside text-base md:text-lg text-gray-700 font-medium">
-                <li>{t("about.milestone1")}</li>
-                <li>{t("about.milestone2")}</li>
-              </ul>
+              <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-5">{t("about.milestones")}</h3>
+              <div className="space-y-3">
+                {[
+                  { year: "2023", text: t("about.milestone1") },
+                  { year: "2024", text: t("about.milestone2") },
+                ].map((m, i) => (
+                  <div key={i} className="flex gap-4 items-start p-4 bg-[#9d174d]/5 rounded-2xl border border-[#9d174d]/10">
+                    <span className="shrink-0 px-3 py-1 bg-[#9d174d] text-white font-black text-xs rounded-lg">{m.year}</span>
+                    <p className="text-sm md:text-base text-gray-700 font-medium">{m.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
+          {/* Right: Image */}
+          <div className="relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white ring-1 ring-gray-100 sticky top-32">
             <Image
               src="/raj/cabin3.jpg"
               alt="Hospital Interior"
               fill
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-[1420px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[400px] rounded-[2rem] overflow-hidden shadow-2xl">
-            <Image
-              src="/medic-563423_1280.jpg"
-              alt="Doctor with Child"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="space-y-10">
-            <div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-5">{t("about.visionTitle")}</h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed whitespace-pre-line">
-                {t("about.visionText")}
-              </p>
+
+      {/* MISSION & VISION SECTION - REDESIGNED */}
+      <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-br from-gray-50 via-white to-red-50/30 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-red-100 rounded-full blur-[120px] opacity-30" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#9d174d]/10 rounded-full blur-[120px] opacity-40" />
+
+        <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-8 sm:mb-10 md:mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
+              <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
+                OUR PURPOSE
+              </span>
             </div>
-            <div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 mb-5">{t("about.missionTitle")}</h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed whitespace-pre-line">
-                {t("about.missionText")}
-              </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-4">
+              Driving{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] via-[#f43f5e] to-[#9d174d]">
+                Healthcare Excellence
+              </span>
+            </h2>
+            <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full" />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
+            {/* Mission Card */}
+            <div className="group bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden hover:shadow-[0_40px_80px_rgba(157,23,77,0.15)] transition-all duration-700 hover:-translate-y-4">
+              {/* Card Header with Icon */}
+              <div className="relative h-48 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] p-6 md:p-8 flex items-end">
+                <div className="absolute top-8 right-8 text-8xl opacity-20">🎯</div>
+                <div>
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl flex items-center justify-center mb-4">
+                    <span className="text-3xl md:text-4xl">🎯</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white">Our Mission</h3>
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-6 md:p-8 lg:p-10">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 font-medium">
+                  Our mission is to provide quality and affordable healthcare in Hapur with care and honesty.
+                </p>
+
+                <div className="space-y-4 md:space-y-6">
+                  <p className="text-lg md:text-xl font-bold text-[#9d174d] flex items-center gap-2">
+                    <span className="w-1 h-6 bg-[#9d174d] rounded-full" />
+                    We are committed to:
+                  </p>
+
+                  <ul className="space-y-3 md:space-y-4">
+                    {[
+                      "Providing 24/7 emergency and medical services",
+                      "Offering safe pregnancy care and women's health treatment",
+                      "Delivering advanced laparoscopic surgery and diagnostics",
+                      "Ensuring proper consultation and personalized patient care",
+                      "Using modern medical equipment for accurate treatment",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 md:gap-4 group/item">
+                        <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#9d174d]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#9d174d] group-hover/item:text-white transition-colors">
+                          <span className="text-[10px] md:text-xs">✓</span>
+                        </span>
+                        <span className="text-sm md:text-base text-gray-700">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-6 md:mt-8 pt-6 border-t border-gray-100">
+                  <p className="text-gray-500 text-sm md:text-base italic flex items-start gap-3">
+                    <span className="text-2xl md:text-3xl">💭</span>
+                    <span>Our goal is to treat every patient with compassion, respect, and professionalism.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="group bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden hover:shadow-[0_40px_80px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-4">
+
+              <div className="relative h-48 bg-gradient-to-r from-blue-600 to-blue-400 p-6 md:p-8 flex items-end">
+                <div className="absolute top-8 right-8 text-8xl opacity-20">👁️</div>
+                <div>
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl flex items-center justify-center mb-4">
+                    <span className="text-3xl md:text-4xl">👁️</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white">Our Vision</h3>
+                </div>
+              </div>
+
+
+              <div className="p-6 md:p-8 lg:p-10">
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 font-medium">
+                  Our vision is to become a trusted multi-specialty hospital in Hapur and nearby areas.
+                </p>
+
+                <div className="space-y-4 md:space-y-6">
+                  <p className="text-lg md:text-xl font-bold text-blue-600 flex items-center gap-2">
+                    <span className="w-1 h-6 bg-blue-600 rounded-full" />
+                    We aim to:
+                  </p>
+
+                  <ul className="space-y-3 md:space-y-4">
+                    {[
+                      "Provide reliable and advanced medical treatment",
+                      "Support families with complete healthcare solutions",
+                      "Maintain high standards of safety and hygiene",
+                      "Make quality healthcare accessible to everyone",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 md:gap-4 group/item">
+                        <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
+                          <span className="text-[10px] md:text-xs">✓</span>
+                        </span>
+                        <span className="text-sm md:text-base text-gray-700">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-6 md:mt-8 pt-6 border-t border-gray-100">
+                  <p className="text-gray-500 text-sm md:text-base italic flex items-start gap-3">
+                    <span className="text-2xl md:text-3xl">💚</span>
+                    <span>We want to build a healthier and stronger community through dedicated medical care.</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section> */}
-
-
-{/* MISSION & VISION SECTION - REDESIGNED */}
-<section className="py-10 sm:py-14 md:py-16 bg-gradient-to-br from-gray-50 via-white to-red-50/30 relative overflow-hidden">
-  {/* Decorative elements */}
-  <div className="absolute top-0 right-0 w-96 h-96 bg-red-100 rounded-full blur-[120px] opacity-30" />
-  <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#9d174d]/10 rounded-full blur-[120px] opacity-40" />
-
-  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 relative z-10">
-    {/* Section Header */}
-    <div className="text-center mb-8 sm:mb-10 md:mb-16">
-      <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-4">
-        <span className="w-2 h-2 rounded-full bg-[#9d174d] animate-pulse" />
-        <span className="text-[#9d174d] font-black tracking-widest uppercase text-[10px] md:text-xs">
-          OUR PURPOSE
-        </span>
-      </div>
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-4">
-        Driving{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9d174d] via-[#f43f5e] to-[#9d174d]">
-          Healthcare Excellence
-        </span>
-      </h2>
-      <div className="h-1.5 w-24 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] mx-auto rounded-full" />
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
-      {/* Mission Card */}
-      <div className="group bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden hover:shadow-[0_40px_80px_rgba(157,23,77,0.15)] transition-all duration-700 hover:-translate-y-4">
-        {/* Card Header with Icon */}
-        <div className="relative h-48 bg-gradient-to-r from-[#9d174d] to-[#f43f5e] p-6 md:p-8 flex items-end">
-          <div className="absolute top-8 right-8 text-8xl opacity-20">🎯</div>
-          <div>
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl flex items-center justify-center mb-4">
-              <span className="text-3xl md:text-4xl">🎯</span>
-            </div>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white">Our Mission</h3>
-          </div>
-        </div>
-
-        {/* Card Content */}
-        <div className="p-6 md:p-8 lg:p-10">
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 font-medium">
-            Our mission is to provide quality and affordable healthcare in Hapur with care and honesty.
-          </p>
-
-          <div className="space-y-4 md:space-y-6">
-            <p className="text-lg md:text-xl font-bold text-[#9d174d] flex items-center gap-2">
-              <span className="w-1 h-6 bg-[#9d174d] rounded-full" />
-              We are committed to:
-            </p>
-            
-            <ul className="space-y-3 md:space-y-4">
-              {[
-                "Providing 24/7 emergency and medical services",
-                "Offering safe pregnancy care and women's health treatment",
-                "Delivering advanced laparoscopic surgery and diagnostics",
-                "Ensuring proper consultation and personalized patient care",
-                "Using modern medical equipment for accurate treatment",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 md:gap-4 group/item">
-                  <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#9d174d]/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-[#9d174d] group-hover/item:text-white transition-colors">
-                    <span className="text-[10px] md:text-xs">✓</span>
-                  </span>
-                  <span className="text-sm md:text-base text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-6 md:mt-8 pt-6 border-t border-gray-100">
-            <p className="text-gray-500 text-sm md:text-base italic flex items-start gap-3">
-              <span className="text-2xl md:text-3xl">💭</span>
-              <span>Our goal is to treat every patient with compassion, respect, and professionalism.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Vision Card */}
-      <div className="group bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden hover:shadow-[0_40px_80px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-4">
-        {/* Card Header with Icon */}
-        <div className="relative h-48 bg-gradient-to-r from-blue-600 to-blue-400 p-6 md:p-8 flex items-end">
-          <div className="absolute top-8 right-8 text-8xl opacity-20">👁️</div>
-          <div>
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-xl md:rounded-2xl flex items-center justify-center mb-4">
-              <span className="text-3xl md:text-4xl">👁️</span>
-            </div>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white">Our Vision</h3>
-          </div>
-        </div>
-
-        {/* Card Content */}
-        <div className="p-6 md:p-8 lg:p-10">
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8 font-medium">
-            Our vision is to become a trusted multi-specialty hospital in Hapur and nearby areas.
-          </p>
-
-          <div className="space-y-4 md:space-y-6">
-            <p className="text-lg md:text-xl font-bold text-blue-600 flex items-center gap-2">
-              <span className="w-1 h-6 bg-blue-600 rounded-full" />
-              We aim to:
-            </p>
-            
-            <ul className="space-y-3 md:space-y-4">
-              {[
-                "Provide reliable and advanced medical treatment",
-                "Support families with complete healthcare solutions",
-                "Maintain high standards of safety and hygiene",
-                "Make quality healthcare accessible to everyone",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 md:gap-4 group/item">
-                  <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors">
-                    <span className="text-[10px] md:text-xs">✓</span>
-                  </span>
-                  <span className="text-sm md:text-base text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-6 md:mt-8 pt-6 border-t border-gray-100">
-            <p className="text-gray-500 text-sm md:text-base italic flex items-start gap-3">
-              <span className="text-2xl md:text-3xl">💚</span>
-              <span>We want to build a healthier and stronger community through dedicated medical care.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       {/* SERVICES TABS SECTION */}
-<section id="services-tabs" className="py-10 sm:py-14 md:py-16 bg-gray-50">
-  <div className="max-w-[1420px] mx-auto px-4 sm:px-8 md:px-10 lg:px-12">
-    <div className="text-center mb-8 sm:mb-12">
-      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight mb-3">Services</h2>
-      <div className="h-1 w-16 bg-[#9d174d] mx-auto rounded-full"></div>
-    </div>
 
-    <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-      {/* Left Sidebar Navigation */}
-      <div className="w-full md:w-1/4 flex flex-row md:flex-col gap-2 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0">
-        {[
-          { id: "emergency", label: "Emergency Care" },
-          { id: "womens", label: "Women's Health" },
-          { id: "surgery", label: "Advanced Surgery" },
-          { id: "internal", label: "Internal Medicine" },
-          { id: "diagnostic", label: "Diagnostic Center" },
-        ].map((tab, idx) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveServiceTab(idx)}
-            className={`flex-shrink-0 px-6 py-3 text-left font-bold text-sm rounded-xl transition-all duration-300 whitespace-nowrap md:whitespace-normal ${
-              activeServiceTab === idx
-                ? "bg-[#9d174d] text-white shadow-lg shadow-red-500/30"
-                : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Right Content Area */}
-      <div className="w-full md:w-3/4 bg-white rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-xl border border-gray-100">
-        {/* Emergency Care */}
-        {activeServiceTab === 0 && (
-          <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4">Emergency Care</h3>
-            
-            <div>
-              <ul className="space-y-3 mb-6">
-                {[
-                  "24/7 Emergency Response Protocol",
-                  "ICU & Critical Care Facilities",
-                  "Free Ambulance Service Map (Hapur coverage)",
-                  "Common Emergencies Handled (heart attacks, accidents, etc.)",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                    <span className="text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-red-50 p-6 rounded-xl border border-red-100">
-              <h4 className="font-black text-gray-900 mb-3">Led by Dr. Vipin Sharma (MD Medicine), our emergency team provides</h4>
-              <ul className="space-y-2">
-                {[
-                  "Cardiac crisis management",
-                  "Sepsis & trauma protocols",
-                  "Direct admission system",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                    <span className="text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-
-        {/* Women's Health */}
-        {activeServiceTab === 1 && (
-          <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4">Women's Health</h3>
-            
-            <ul className="space-y-3 mb-6">
-              {[
-                "Pregnancy Care Timeline (trimester-wise)",
-                "PCOS Management Program",
-                "Menstrual Disorder Treatments",
-                "Minimally Invasive Gynecology Surgeries",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-700">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                  <span className="text-sm md:text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="bg-rose-50 p-6 rounded-xl border border-rose-100">
-              <h4 className="font-black text-gray-900 mb-2">Dr. Srishti Bhardwaj's Specialized Approach</h4>
-              <p className="text-sm md:text-base text-gray-600 mb-3">
-                With 10+ years focusing on Hapur women's unique health challenges, Dr. Srishti offers:
-              </p>
-              <ul className="space-y-2">
-                {[
-                  "Local-dialect counseling",
-                  "Customized Ayurvedic-nutrition plans",
-                  "24/7 delivery suites with fetal monitoring",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                    <span className="text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-
-        {/* Advanced Surgery */}
-        {activeServiceTab === 2 && (
-          <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4">Advanced Surgery</h3>
-            
-            <ul className="space-y-3 mb-6">
-              {[
-                "Laparoscopic vs Open Surgery Comparison",
-                "Conditions Treated (gallstones, appendicitis, hernia)",
-                "Day-Care Surgery Process",
-                "Pre/Post-Op Guidelines",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-700">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                  <span className="text-sm md:text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="bg-violet-50 p-6 rounded-xl border border-violet-100">
-              <h4 className="font-black text-gray-900 mb-2">Pioneered by Dr. M.C. Sharma</h4>
-              <p className="text-sm md:text-base text-gray-600 mb-3">
-                Our MS Surgery specialist has performed 1,500+ procedures with:
-              </p>
-              <ul className="space-y-2">
-                {[
-                  "95% same-day discharge rate",
-                  "Scarless technique (<1cm incisions)",
-                  "Free follow-up for Hapur residents",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                    <span className="text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-
-        {/* Internal Medicine */}
-        {activeServiceTab === 3 && (
-          <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4">Internal Medicine</h3>
-            
-            <ul className="space-y-3 mb-6">
-              {[
-                "Cardiac & Pulmonary Care",
-                "Diabetes & Thyroid Management",
-                "Renal & Gastrointestinal Health",
-                "Neurological Disorders",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-700">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                  <span className="text-sm md:text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="bg-sky-50 p-6 rounded-xl border border-sky-100">
-              <h4 className="font-black text-gray-900 mb-2">Dr. Vipin Sharma's Holistic Framework</h4>
-              <p className="text-sm md:text-base text-gray-600 mb-3">
-                Ex-Safdarjung Hospital physician providing:
-              </p>
-              <ul className="space-y-2">
-                {[
-                  "Systemic health mapping",
-                  "Pollution-impact mitigation strategies",
-                  "Preventive health packages",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                    <span className="text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-
-        {/* Diagnostic Center */}
-        {activeServiceTab === 4 && (
-          <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
-            <h3 className="text-xl md:text-2xl font-black text-gray-900 mb-4">Diagnostic Center</h3>
-            
-            <ul className="space-y-3 mb-6">
-              {[
-                "ECG/2D Echo/PFT Testing",
-                "Ultrasound & X-Ray Imaging",
-                "Lab Test Menu & Pricing",
-                "Report Interpretation Process",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-700">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                  <span className="text-sm md:text-base">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-              <h4 className="font-black text-gray-900 mb-2">Expert-Guided Diagnostics</h4>
-              <p className="text-sm md:text-base text-gray-600 mb-3">
-                All tests supervised by:
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  "Dr. Vipin Sharma (cardiac reports)",
-                  "Dr. Srishti Bhardwaj (obstetric ultrasounds)",
-                  "Dr. M.C. Sharma (pre-op screenings)",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-gray-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#9d174d] mt-2 shrink-0" />
-                    <span className="text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <Link href="/contact" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#9d174d] text-white font-semibold rounded-lg hover:bg-[#831843] transition-colors text-sm">
-                Get Appointment <ArrowRightIcon />
-              </Link>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  </div>
-</section>
     </div>
   );
 }

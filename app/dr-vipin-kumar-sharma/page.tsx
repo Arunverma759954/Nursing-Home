@@ -13,9 +13,9 @@ export default function DrVipinKumarSharma() {
     }, []);
 
     return (
-        <div className="bg-white min-h-screen animate-page-enter mt-32">
+        <div className="bg-white min-h-screen animate-page-enter mt-36">
             {/* Hero Section */}
-            <div className="relative h-[320px] md:h-[380px] flex items-center overflow-hidden bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900">
+            <div className="relative h-[280px] md:h-[350px] flex items-center overflow-hidden bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
                 </div>
@@ -70,7 +70,7 @@ export default function DrVipinKumarSharma() {
             </div>
 
             {/* Main Content */}
-            <div className="max-w-[1420px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 py-8 md:py-12">
+            <div className="max-w-[1420px] mx-auto px-5 sm:px-8 md:px-10 lg:px-12 py-6 md:py-10">
                 {/* Quick Info Cards */}
                 <div className="grid md:grid-cols-3 gap-4 -mt-16 relative z-10 mb-10 md:mb-12">
                     {[
@@ -89,7 +89,7 @@ export default function DrVipinKumarSharma() {
                 </div>
 
                 {/* About Section */}
-                <div className="grid lg:grid-cols-2 gap-10 items-start mb-12">
+                <div className="grid lg:grid-cols-2 gap-8 items-start mb-10">
                     <div className="space-y-8">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6">
@@ -130,7 +130,7 @@ export default function DrVipinKumarSharma() {
                 </div>
 
                 {/* Community Service */}
-                <div className="bg-gray-900 rounded-[4rem] p-8 md:p-12 text-white mb-12">
+                <div className="bg-gray-900 rounded-[3rem] p-6 md:p-12 text-white mb-10">
                     <div className="max-w-4xl mx-auto text-center space-y-6">
                         <Heart className="w-16 h-16 text-red-400 mx-auto" />
                         <h3 className="text-xl md:text-2xl font-black">{t("doctors.vipin.communityTitle")}</h3>
