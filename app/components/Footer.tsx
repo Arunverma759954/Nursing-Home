@@ -315,7 +315,7 @@ export default function Footer() {
           href="https://wa.me/916397970802"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-8 right-8 z-[999] w-14 h-14 min-w-[56px] min-h-[56px] bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#20bd5a] transition-all duration-300 hover:-translate-y-2 hover:shadow-green-500/40 flex items-center justify-center shrink-0 overflow-visible"
+          className="fixed bottom-8 right-8 z-[999] w-14 h-14 min-w-[56px] min-h-[56px] bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#20bd5a] transition-all duration-300 hover:-translate-y-2 hover:shadow-green-500/40 hidden xl:flex items-center justify-center shrink-0 overflow-visible"
           aria-label="WhatsApp"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="shrink-0">
